@@ -20,7 +20,7 @@ interface FeeExplorerProps {
 }
 
 const feeSelectTriggerClass =
-  "!w-full !h-auto min-h-12 px-4 py-3 data-[size=default]:!h-auto";
+  "!w-full !h-auto min-h-12 px-4 py-3 data-[size=default]:!h-auto *:data-[slot=select-value]:line-clamp-none *:data-[slot=select-value]:whitespace-normal";
 const feeSelectContentClass = "p-1.5";
 const feeSelectItemClass = "min-h-11 py-2.5 pl-3 pr-8";
 
@@ -80,7 +80,7 @@ export function FeeExplorer({ centre, fees }: FeeExplorerProps) {
 
   return (
     <div className="space-y-8">
-      <div className="grid items-start gap-6 lg:grid-cols-[minmax(200px,1fr)_minmax(0,3fr)] lg:items-stretch">
+      <div className="grid items-start gap-6 lg:grid-cols-[minmax(360px,2fr)_minmax(0,3fr)] lg:items-stretch">
         <div className="grid w-full grid-cols-1 gap-4">
           <div className="w-full">
             <label className="mb-2.5 block text-sm font-medium">Age group</label>

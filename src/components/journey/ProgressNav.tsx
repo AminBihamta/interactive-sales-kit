@@ -77,7 +77,7 @@ export function ProgressNav({ slug }: ProgressNavProps) {
       <nav
         aria-label="Journey progress"
         className={cn(
-          "pointer-events-auto w-full max-w-6xl rounded-2xl border border-white/30 px-3 py-2 sm:px-4",
+          "pointer-events-auto w-max max-w-[calc(100vw-1.5rem)] rounded-2xl border border-white/30 px-3 py-2 sm:max-w-[calc(100vw-2rem)] sm:px-4",
           "bg-brand-primary/85 backdrop-blur-xl backdrop-saturate-150",
           "shadow-[0_12px_40px_rgba(0,0,0,0.28),0_2px_8px_rgba(205,33,51,0.18),inset_0_1px_0_rgba(255,255,255,0.18)]",
           "ring-1 ring-black/10",
@@ -93,7 +93,7 @@ export function ProgressNav({ slug }: ProgressNavProps) {
             <BrandLogo variant="white" className="h-8 w-auto md:h-9" />
           </Link>
 
-          <div className="flex min-w-0 flex-1 items-center justify-center gap-1 overflow-x-auto">
+          <div className="flex items-center gap-1 overflow-x-auto">
             {JOURNEY_STEPS.map((step, index) => {
               const isActive = step.id === currentStepId;
               const isCompleted = index < currentIndex;

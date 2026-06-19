@@ -26,20 +26,58 @@ interface SwipePreview {
 const SWIPE_THRESHOLD = 80;
 const PREVIEW_START = 20;
 
+function findHorizontalScrollParent(element: EventTarget | null): HTMLElement | null {
+  let el =
+    element instanceof HTMLElement ? element : element instanceof Node ? element.parentElement : null;
+
+  while (el) {
+    if (el.scrollWidth > el.clientWidth + 1) {
+      const { overflowX } = getComputedStyle(el);
+      if (overflowX === "auto" || overflowX === "scroll" || overflowX === "overlay") {
+        return el;
+      }
+    }
+    el = el.parentElement;
+  }
+
+  return null;
+}
+
+function shouldDeferToHorizontalScroll(
+  scrollParent: HTMLElement,
+  deltaX: number,
+): boolean {
+  if (deltaX < 0) {
+    return scrollParent.scrollLeft + scrollParent.clientWidth < scrollParent.scrollWidth - 2;
+  }
+  if (deltaX > 0) {
+    return scrollParent.scrollLeft > 2;
+  }
+  return false;
+}
+
 export function SwipeNavigation({ slug, children }: SwipeNavigationProps) {
   const pathname = usePathname();
   const { start } = useJourneyTransition();
   const reducedMotion = useReducedMotion();
-  const touchStart = useRef<{ x: number; y: number } | null>(null);
+  const touchStart = useRef<{
+    x: number;
+    y: number;
+    scrollParent: HTMLElement | null;
+    scrollLeft: number;
+  } | null>(null);
   const [swipePreview, setSwipePreview] = useState<SwipePreview | null>(null);
 
   useEffect(() => {
     const clearPreview = () => setSwipePreview(null);
 
     const handleTouchStart = (e: TouchEvent) => {
+      const scrollParent = findHorizontalScrollParent(e.target);
       touchStart.current = {
         x: e.touches[0].clientX,
         y: e.touches[0].clientY,
+        scrollParent,
+        scrollLeft: scrollParent?.scrollLeft ?? 0,
       };
       clearPreview();
     };
@@ -51,6 +89,14 @@ export function SwipeNavigation({ slug, children }: SwipeNavigationProps) {
       const deltaY = e.touches[0].clientY - touchStart.current.y;
 
       if (Math.abs(deltaY) > Math.abs(deltaX)) {
+        clearPreview();
+        return;
+      }
+
+      if (
+        touchStart.current.scrollParent &&
+        shouldDeferToHorizontalScroll(touchStart.current.scrollParent, deltaX)
+      ) {
         clearPreview();
         return;
       }
@@ -82,6 +128,16 @@ export function SwipeNavigation({ slug, children }: SwipeNavigationProps) {
       const deltaY = e.changedTouches[0].clientY - touchStart.current.y;
 
       clearPreview();
+
+      const { scrollParent, scrollLeft: startScrollLeft } = touchStart.current;
+
+      if (scrollParent) {
+        const scrollChanged = Math.abs(scrollParent.scrollLeft - startScrollLeft) > 5;
+        if (scrollChanged || shouldDeferToHorizontalScroll(scrollParent, deltaX)) {
+          touchStart.current = null;
+          return;
+        }
+      }
 
       if (Math.abs(deltaX) < SWIPE_THRESHOLD || Math.abs(deltaY) > Math.abs(deltaX)) {
         touchStart.current = null;

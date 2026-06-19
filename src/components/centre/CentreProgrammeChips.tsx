@@ -10,12 +10,12 @@ interface CentreProgrammeChipsProps {
 const PROGRAMME_CONFIG = [
   {
     key: "playgroup" as const,
-    label: "Playgroup",
+    label: "Montessori Playgroup",
     icon: Baby,
   },
   {
     key: "junior" as const,
-    label: "Junior",
+    label: "Montessori Junior",
     icon: GraduationCap,
   },
 ] as const;

@@ -1,76 +1,147 @@
 {
   "title": "A Day in The children's house",
   "disclaimer": "The actual schedule may vary for different branches and is subject to change when there are special activities such as excursions, events, etc.",
-  "blocks": [
-    {
-      "id": "arrival",
-      "time": "8:00 AM",
-      "title": "Arrival & Free Play",
-      "description": "Children arrive and settle in with free choice activities in the prepared environment.",
-      "icon": "sunrise"
+  "programmes": {
+    "playgroup": {
+      "blocks": [
+        {
+          "id": "arrival",
+          "time": "8:00 AM",
+          "title": "Arrival & Settling In",
+          "description": "Gentle drop-off routines, diaper checks, and free exploration in the infant–toddler prepared environment.",
+          "icon": "sunrise"
+        },
+        {
+          "id": "sensory-work",
+          "time": "8:45 AM",
+          "title": "Sensory & Practical Life",
+          "description": "Hands-on Montessori activities that build fine motor skills, language, and independence at each child's pace.",
+          "icon": "blocks"
+        },
+        {
+          "id": "snack",
+          "time": "9:45 AM",
+          "title": "Snack & Care Routines",
+          "description": "Healthy snack with feeding support, hand washing, and toileting routines guided by caregivers.",
+          "icon": "apple"
+        },
+        {
+          "id": "outdoor",
+          "time": "10:15 AM",
+          "title": "Outdoor & Gross Motor",
+          "description": "Fresh air, climbing, sand play, and movement activities that support physical development.",
+          "icon": "tree"
+        },
+        {
+          "id": "circle",
+          "time": "11:00 AM",
+          "title": "Circle Time & Stories",
+          "description": "Songs, rhymes, and picture books to nurture language, listening, and social connection.",
+          "icon": "users"
+        },
+        {
+          "id": "lunch",
+          "time": "11:30 AM",
+          "title": "Lunch",
+          "description": "Nutritious meal with support for self-feeding, table manners, and calm transitions.",
+          "icon": "utensils"
+        },
+        {
+          "id": "nap",
+          "time": "12:15 PM",
+          "title": "Nap / Quiet Rest",
+          "description": "Individual sleep schedules in a peaceful setting; quiet activities for early risers.",
+          "icon": "moon"
+        },
+        {
+          "id": "afternoon",
+          "time": "2:30 PM",
+          "title": "Afternoon Activities",
+          "description": "Art, music, and guided play to extend learning before pick-up.",
+          "icon": "palette"
+        },
+        {
+          "id": "tea",
+          "time": "3:30 PM",
+          "title": "Tea & Dismissal",
+          "description": "Light snack and handover to parents. Half-day pick-up from 1:00 PM at selected centres.",
+          "icon": "coffee"
+        }
+      ]
     },
-    {
-      "id": "morning-circle",
-      "time": "9:00 AM",
-      "title": "Morning Circle",
-      "description": "Group gathering for songs, calendar, weather, and community building.",
-      "icon": "users"
-    },
-    {
-      "id": "montessori-work",
-      "time": "9:30 AM",
-      "title": "Montessori Work Cycle",
-      "description": "Uninterrupted work period with didactic materials across all five Montessori areas.",
-      "icon": "blocks"
-    },
-    {
-      "id": "snack",
-      "time": "10:30 AM",
-      "title": "Snack Time",
-      "description": "Healthy snack with practical life skills — setting table, serving, and cleaning up.",
-      "icon": "apple"
-    },
-    {
-      "id": "outdoor",
-      "time": "11:00 AM",
-      "title": "Outdoor Play",
-      "description": "Physical activity, nature exploration, and social play in outdoor spaces.",
-      "icon": "tree"
-    },
-    {
-      "id": "lunch",
-      "time": "12:00 PM",
-      "title": "Lunch",
-      "description": "Nutritious meal with grace and courtesy, fostering independence and table manners.",
-      "icon": "utensils"
-    },
-    {
-      "id": "nap",
-      "time": "1:00 PM",
-      "title": "Rest / Nap Time",
-      "description": "Quiet rest period for younger children; quiet activities for non-nappers.",
-      "icon": "moon"
-    },
-    {
-      "id": "afternoon-work",
-      "time": "2:30 PM",
-      "title": "Afternoon Activities",
-      "description": "STEAM projects, art, music, and group activities to extend learning.",
-      "icon": "palette"
-    },
-    {
-      "id": "tea",
-      "time": "3:30 PM",
-      "title": "Tea Time",
-      "description": "Afternoon snack and preparation for departure.",
-      "icon": "coffee"
-    },
-    {
-      "id": "dismissal",
-      "time": "4:00 PM",
-      "title": "Dismissal",
-      "description": "End of half-day programme. Full-day children continue with enrichment until 6:00 PM.",
-      "icon": "home"
+    "junior": {
+      "blocks": [
+        {
+          "id": "arrival",
+          "time": "8:00 AM",
+          "title": "Arrival & Free Play",
+          "description": "Children arrive and settle in with free choice activities in the prepared environment.",
+          "icon": "sunrise"
+        },
+        {
+          "id": "morning-circle",
+          "time": "9:00 AM",
+          "title": "Morning Circle",
+          "description": "Group gathering for songs, calendar, weather, and community building.",
+          "icon": "users"
+        },
+        {
+          "id": "montessori-work",
+          "time": "9:30 AM",
+          "title": "Montessori Work Cycle",
+          "description": "Uninterrupted work period with didactic materials across all five Montessori areas.",
+          "icon": "blocks"
+        },
+        {
+          "id": "snack",
+          "time": "10:30 AM",
+          "title": "Snack Time",
+          "description": "Healthy snack with practical life skills — setting table, serving, and cleaning up.",
+          "icon": "apple"
+        },
+        {
+          "id": "outdoor",
+          "time": "11:00 AM",
+          "title": "Outdoor Play",
+          "description": "Physical activity, nature exploration, and social play in outdoor spaces.",
+          "icon": "tree"
+        },
+        {
+          "id": "lunch",
+          "time": "12:00 PM",
+          "title": "Lunch",
+          "description": "Nutritious meal with grace and courtesy, fostering independence and table manners.",
+          "icon": "utensils"
+        },
+        {
+          "id": "nap",
+          "time": "1:00 PM",
+          "title": "Rest / Nap Time",
+          "description": "Quiet rest period for younger children; quiet activities for non-nappers.",
+          "icon": "moon"
+        },
+        {
+          "id": "afternoon-work",
+          "time": "2:30 PM",
+          "title": "Afternoon Activities",
+          "description": "STEAM projects, art, music, and group activities to extend learning.",
+          "icon": "palette"
+        },
+        {
+          "id": "tea",
+          "time": "3:30 PM",
+          "title": "Tea Time",
+          "description": "Afternoon snack and preparation for departure.",
+          "icon": "coffee"
+        },
+        {
+          "id": "dismissal",
+          "time": "4:00 PM",
+          "title": "Dismissal",
+          "description": "End of half-day programme. Full-day children continue with enrichment until 6:00 PM.",
+          "icon": "home"
+        }
+      ]
     }
-  ]
+  }
 }

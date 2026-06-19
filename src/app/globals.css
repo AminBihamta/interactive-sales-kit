@@ -115,6 +115,10 @@
     scrollbar-color: var(--brand-primary) transparent;
   }
 
+  .brand-scroll {
+    touch-action: pan-x pinch-zoom;
+  }
+
   .brand-scroll::-webkit-scrollbar,
   .schedule-list-scroll::-webkit-scrollbar {
     width: 5px;

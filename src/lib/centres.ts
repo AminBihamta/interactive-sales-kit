@@ -9,6 +9,8 @@ import type {
   CentreFees,
   ProgrammesContent,
   ScheduleContent,
+  SchedulesContent,
+  ProgrammeScheduleKey,
 } from "./types";
 
 export function getAllCentres(): Centre[] {
@@ -27,8 +29,19 @@ export function getCurriculum(): CurriculumContent {
   return curriculumData as CurriculumContent;
 }
 
-export function getSchedule(): ScheduleContent {
-  return schedulesData as ScheduleContent;
+export function getSchedules(): SchedulesContent {
+  return schedulesData as SchedulesContent;
+}
+
+export function getScheduleForProgramme(
+  schedules: SchedulesContent,
+  programme: ProgrammeScheduleKey,
+): ScheduleContent {
+  return {
+    title: schedules.title,
+    disclaimer: schedules.disclaimer,
+    blocks: schedules.programmes[programme].blocks,
+  };
 }
 
 export function getProgrammes(): ProgrammesContent {

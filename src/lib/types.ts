@@ -55,10 +55,22 @@ export interface ScheduleBlock {
   icon: string;
 }
 
+export type ProgrammeScheduleKey = "playgroup" | "junior";
+
+export interface ProgrammeSchedule {
+  blocks: ScheduleBlock[];
+}
+
 export interface ScheduleContent {
   title: string;
   disclaimer: string;
   blocks: ScheduleBlock[];
+}
+
+export interface SchedulesContent {
+  title: string;
+  disclaimer: string;
+  programmes: Record<ProgrammeScheduleKey, ProgrammeSchedule>;
 }
 
 export interface FeeTier {
