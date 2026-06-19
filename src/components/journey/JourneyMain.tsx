@@ -16,7 +16,7 @@ export function JourneyMain({ children }: JourneyMainProps) {
     <main
       className={cn(
         isHome
-          ? "h-[calc(100dvh-var(--journey-nav-height))] overflow-hidden"
+          ? "h-full min-h-0 overflow-hidden"
           : "mx-auto max-w-5xl px-6 py-8",
       )}
     >

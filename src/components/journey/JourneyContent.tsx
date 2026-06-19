@@ -13,7 +13,14 @@ export function JourneyContent({ children }: JourneyContentProps) {
   const isHome = resolveStepFromPath(pathname) === "home";
 
   return (
-    <div className={cn(isHome ? "h-dvh overflow-hidden" : "min-h-dvh pb-journey")}>
+    <div
+      className={cn(
+        "max-h-[calc(100dvh-40px)] pb-journey",
+        isHome
+          ? "h-[calc(100dvh-40px)] overflow-hidden"
+          : "overflow-y-auto",
+      )}
+    >
       {children}
     </div>
   );
