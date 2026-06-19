@@ -160,7 +160,9 @@ export function JourneyTransitionProvider({
                 variant={isCentreEntry ? "red" : "white"}
                 priority
                 className={
-                  isCentreEntry ? "h-10 w-auto md:h-12" : "h-14 w-auto md:h-16"
+                  isCentreEntry
+                    ? "h-[3.75rem] w-auto md:h-[4.5rem]"
+                    : "h-14 w-auto md:h-16"
                 }
               />
             </motion.div>
