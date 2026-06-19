@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, MapPin, Sparkles } from "lucide-react";
+import { ArrowRight, Baby, Building, MapPin, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { centreCtaReveal, centrePanelSlide } from "@/lib/animations";
 import { useJourneyTransition } from "@/components/journey/JourneyTransition";
@@ -51,7 +51,8 @@ export function CentreHomePanel({ centre, ready = true }: CentreHomePanelProps) 
 
         <div className="mt-5 space-y-3 rounded-xl bg-surface p-4">
           <div className="flex items-start justify-between gap-4 border-b border-border/60 pb-3">
-            <span className="text-xs font-medium uppercase text-muted-foreground">
+            <span className="inline-flex items-center gap-1.5 text-xs font-medium uppercase text-muted-foreground">
+              <Baby className="size-3 shrink-0 text-brand-secondary" />
               Ages served
             </span>
             <span className="text-right text-sm font-semibold text-foreground">
@@ -59,24 +60,23 @@ export function CentreHomePanel({ centre, ready = true }: CentreHomePanelProps) 
             </span>
           </div>
           <div className="flex items-start justify-between gap-4 border-b border-border/60 pb-3">
-            <span className="text-xs font-medium uppercase text-muted-foreground">
+            <span className="inline-flex items-center gap-1.5 text-xs font-medium uppercase text-muted-foreground">
+              <MapPin className="size-3 shrink-0 text-brand-secondary" />
               Region
             </span>
             <span className="text-right text-sm font-semibold text-foreground">
               {centre.region}
             </span>
           </div>
-          <div className="flex items-start gap-3">
-            <MapPin className="mt-0.5 size-4 shrink-0 text-brand-secondary" />
-            <p className="line-clamp-2 text-sm font-medium leading-snug text-foreground">
+          <div className="flex items-start justify-between gap-4">
+            <span className="inline-flex items-center gap-1.5 text-xs font-medium uppercase text-muted-foreground">
+              <Building className="size-3 shrink-0 text-brand-secondary" />
+              Address
+            </span>
+            <p className="line-clamp-2 text-right text-sm font-semibold leading-snug text-foreground">
               {centre.address}
             </p>
           </div>
-          {!centre.feesAvailable && (
-            <p className="text-xs font-medium text-muted-foreground">
-              Fee details available on request
-            </p>
-          )}
         </div>
       </div>
 

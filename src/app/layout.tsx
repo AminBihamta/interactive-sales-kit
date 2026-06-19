@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans } from "next/font/google";
+import { AppProviders } from "@/components/layout/AppProviders";
 import { PortraitOverlay } from "@/components/layout/PortraitOverlay";
 import { ServiceWorkerRegistration } from "@/components/layout/ServiceWorkerRegistration";
 import "./globals.css";
@@ -41,7 +42,7 @@ export default function RootLayout({
       <body className="min-h-dvh font-sans antialiased">
         <ServiceWorkerRegistration />
         <PortraitOverlay />
-        {children}
+        <AppProviders>{children}</AppProviders>
       </body>
     </html>
   );

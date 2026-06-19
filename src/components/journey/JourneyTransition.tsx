@@ -11,8 +11,10 @@ import {
 import { useRouter, usePathname } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { BrandLogo } from "@/components/layout/BrandLogo";
+import { cn } from "@/lib/utils";
 
 type TransitionPhase = "idle" | "covering" | "navigating" | "revealing";
+export type TransitionVariant = "journey" | "centre-entry";
 
 interface CircleOrigin {
   x: number;
@@ -20,7 +22,11 @@ interface CircleOrigin {
 }
 
 interface JourneyTransitionContextValue {
-  start: (href: string, origin?: CircleOrigin) => void;
+  start: (
+    href: string,
+    origin?: CircleOrigin,
+    variant?: TransitionVariant,
+  ) => void;
   isTransitioning: boolean;
 }
 
@@ -58,10 +64,15 @@ export function JourneyTransitionProvider({
 
   const [phase, setPhase] = useState<TransitionPhase>("idle");
   const [origin, setOrigin] = useState<CircleOrigin | null>(null);
+  const [variant, setVariant] = useState<TransitionVariant>("journey");
   const targetHref = useRef<string | null>(null);
 
   const start = useCallback(
-    (href: string, clickOrigin?: CircleOrigin) => {
+    (
+      href: string,
+      clickOrigin?: CircleOrigin,
+      transitionVariant: TransitionVariant = "journey",
+    ) => {
       if (phase !== "idle") return;
 
       if (reducedMotion || !clickOrigin) {
@@ -70,6 +81,7 @@ export function JourneyTransitionProvider({
       }
 
       setOrigin(clickOrigin);
+      setVariant(transitionVariant);
       targetHref.current = href;
       setPhase("covering");
     },
@@ -86,6 +98,7 @@ export function JourneyTransitionProvider({
 
   const zeroClip = origin ? circleClip(origin, "0%") : undefined;
   const fullClip = origin ? circleClip(origin, "150vmax") : undefined;
+  const isCentreEntry = variant === "centre-entry";
 
   return (
     <JourneyTransitionContext.Provider value={{ start, isTransitioning }}>
@@ -97,7 +110,10 @@ export function JourneyTransitionProvider({
             <motion.div
               key="journey-circle-overlay"
               aria-hidden="true"
-              className="pointer-events-none fixed inset-0 z-[60] bg-brand-primary"
+              className={cn(
+                "pointer-events-none fixed inset-0 z-[60]",
+                isCentreEntry ? "bg-white" : "bg-brand-primary",
+              )}
               initial={{ clipPath: zeroClip }}
               animate={{
                 clipPath: phase === "revealing" ? zeroClip : fullClip,
@@ -116,6 +132,7 @@ export function JourneyTransitionProvider({
                 } else if (phase === "revealing") {
                   setPhase("idle");
                   setOrigin(null);
+                  setVariant("journey");
                   targetHref.current = null;
                 }
               }}
@@ -139,7 +156,13 @@ export function JourneyTransitionProvider({
                     }
               }
             >
-              <BrandLogo variant="white" priority className="h-14 w-auto md:h-16" />
+              <BrandLogo
+                variant={isCentreEntry ? "red" : "white"}
+                priority
+                className={
+                  isCentreEntry ? "h-10 w-auto md:h-12" : "h-14 w-auto md:h-16"
+                }
+              />
             </motion.div>
           </>
         )}

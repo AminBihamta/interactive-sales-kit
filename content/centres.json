@@ -468,7 +468,7 @@
         }
       },
       "playgroupMinAgeMonths": 18,
-      "feesAvailable": false,
+      "feesAvailable": true,
       "usps": [
         "Little Chef Kitchen",
         "Water play area",

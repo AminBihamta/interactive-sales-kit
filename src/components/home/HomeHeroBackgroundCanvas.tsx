@@ -5,7 +5,15 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
 const COUNT = 180;
-const GYRO_SENSITIVITY = 40;
+const GYRO_SENSITIVITY = 18;
+const POINTER_PARALLAX = 0.3;
+const GYRO_PARALLAX = 1.1;
+const PARALLAX_LERP = 0.07;
+const MAX_PARALLAX = 1.6;
+
+function bubbleDepthFactor(z: number) {
+  return 0.5 + ((z + 2) / 4) * 1.0;
+}
 
 type ParallaxInput = {
   x: number;
@@ -126,24 +134,37 @@ function Particles({ input }: { input: ReturnType<typeof useParallaxInput> }) {
     const t = state.clock.elapsedTime;
 
     const targetX = THREE.MathUtils.clamp(
-      (input.current.pointerTx + input.current.gyroTx) * 0.3,
-      -1,
-      1,
+      input.current.pointerTx * POINTER_PARALLAX +
+        input.current.gyroTx * GYRO_PARALLAX,
+      -MAX_PARALLAX,
+      MAX_PARALLAX,
     );
     const targetY = THREE.MathUtils.clamp(
-      (input.current.pointerTy + input.current.gyroTy) * 0.3,
-      -1,
-      1,
+      input.current.pointerTy * POINTER_PARALLAX +
+        input.current.gyroTy * GYRO_PARALLAX,
+      -MAX_PARALLAX,
+      MAX_PARALLAX,
     );
 
-    input.current.x = THREE.MathUtils.lerp(input.current.x, targetX, 0.04);
-    input.current.y = THREE.MathUtils.lerp(input.current.y, targetY, 0.04);
+    input.current.x = THREE.MathUtils.lerp(
+      input.current.x,
+      targetX,
+      PARALLAX_LERP,
+    );
+    input.current.y = THREE.MathUtils.lerp(
+      input.current.y,
+      targetY,
+      PARALLAX_LERP,
+    );
 
     for (let i = 0; i < COUNT; i++) {
       const s = seeds[i];
+      const depth = bubbleDepthFactor(s.z);
       dummy.position.set(
-        s.x + input.current.x,
-        s.y + Math.sin(t * s.speed + s.phase) * 0.15 + input.current.y,
+        s.x + input.current.x * depth,
+        s.y +
+          Math.sin(t * s.speed + s.phase) * 0.15 +
+          input.current.y * depth,
         s.z,
       );
       dummy.scale.setScalar(0.025 + (i % 5) * 0.008);

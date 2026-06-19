@@ -112,7 +112,7 @@ export function SteamPillars({ curriculum }: SteamPillarsProps) {
       <div className="relative">
         <div
           ref={scrollRef}
-          className="brand-scroll flex gap-3 overflow-x-auto overscroll-x-contain pb-1"
+          className="brand-scroll flex gap-3 overflow-x-auto overscroll-x-contain pb-3"
         >
           {curriculum.montessoriAreas.map((area, i) => (
             <motion.div

@@ -155,6 +155,18 @@
         { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 8250, "monthlyFee": 2750, "deposit": 8250 }
       ],
       "notes": ["1 term = 3 months"]
+    },
+    {
+      "slug": "mutiara-damansara",
+      "available": true,
+      "oneTimeFees": { "registrationFee": 1000, "annualResourceFee": 800, "bookStationeryUnder3": 350, "bookStationeryOver3": 650, "insurance": 30 },
+      "tiers": [
+        { "ageGroup": "Montessori Playgroup (18 months – 3 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 / 12.30 pm", "termFee": 5700, "monthlyFee": 1900, "deposit": 1900 },
+        { "ageGroup": "Montessori Playgroup (18 months – 3 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 7200, "monthlyFee": 2400, "deposit": 2400 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 1 pm", "termFee": 5400, "monthlyFee": 1800, "deposit": 1800 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 6900, "monthlyFee": 2300, "deposit": 2300 }
+      ],
+      "notes": ["1 term = 3 months"]
     }
   ]
 }

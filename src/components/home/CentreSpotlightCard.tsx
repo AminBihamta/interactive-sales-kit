@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, MapPin } from "lucide-react";
+import { useJourneyTransition } from "@/components/journey/JourneyTransition";
 import type { Centre } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -21,6 +22,8 @@ export function CentreSpotlightCard({
   onSelect,
 }: CentreSpotlightCardProps) {
   const reducedMotion = useReducedMotion();
+  const { start } = useJourneyTransition();
+  const centreHref = `/centres/${centre.slug}`;
 
   return (
     <motion.div
@@ -34,12 +37,16 @@ export function CentreSpotlightCard({
       aria-current={isActive ? "true" : undefined}
     >
       <Link
-        href={`/centres/${centre.slug}`}
+        href={centreHref}
         onClick={(e) => {
           if (!isActive) {
             e.preventDefault();
             onSelect?.(index);
+            return;
           }
+
+          e.preventDefault();
+          start(centreHref, { x: e.clientX, y: e.clientY }, "centre-entry");
         }}
         className={cn(
           "group relative flex h-full w-full flex-col overflow-hidden rounded-2xl bg-black shadow-xl",
