@@ -5,8 +5,8 @@ import { Download, Share } from "lucide-react";
 import { BrandLogo } from "@/components/layout/BrandLogo";
 import {
   isIosDevice,
-  isPwaGateEnabled,
   isStandalonePwa,
+  shouldRequirePwaInstall,
 } from "@/lib/pwa";
 
 interface PwaGateProps {
@@ -20,30 +20,39 @@ export function PwaGate({ children }: PwaGateProps) {
   const [isIos, setIsIos] = useState(false);
 
   useEffect(() => {
-    if (!isPwaGateEnabled()) {
-      setAccess("allowed");
-      return;
-    }
-
     const updateAccess = () => {
+      if (!shouldRequirePwaInstall()) {
+        setAccess("allowed");
+        return;
+      }
+
       setAccess(isStandalonePwa() ? "allowed" : "blocked");
     };
 
     setIsIos(isIosDevice());
     updateAccess();
 
-    const mediaQueries = ["standalone", "fullscreen", "minimal-ui"].map(
-      (mode) => window.matchMedia(`(display-mode: ${mode})`),
-    );
+    const mediaQueries = [
+      ...["standalone", "fullscreen", "minimal-ui"].map((mode) =>
+        window.matchMedia(`(display-mode: ${mode})`),
+      ),
+      window.matchMedia(
+        "(hover: hover) and (pointer: fine) and (min-width: 1024px)",
+      ),
+      window.matchMedia("(max-width: 1024px)"),
+      window.matchMedia("(pointer: coarse)"),
+    ];
 
     mediaQueries.forEach((mq) => mq.addEventListener("change", updateAccess));
     window.addEventListener("appinstalled", updateAccess);
+    window.addEventListener("resize", updateAccess);
 
     return () => {
       mediaQueries.forEach((mq) =>
         mq.removeEventListener("change", updateAccess),
       );
       window.removeEventListener("appinstalled", updateAccess);
+      window.removeEventListener("resize", updateAccess);
     };
   }, []);
 
