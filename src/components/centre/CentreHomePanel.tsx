@@ -78,26 +78,26 @@ export function CentreHomePanel({ centre, ready = true }: CentreHomePanelProps) 
             </p>
           </div>
         </div>
-      </div>
 
-      <motion.div
-        variants={centreCtaReveal}
-        initial={ready ? "initial" : false}
-        animate={ready ? "animate" : false}
-        className="shrink-0 border-t border-border/60 bg-white px-5 py-4 lg:px-7 lg:py-5"
-      >
-        <Link
-          href={curriculumHref}
-          onClick={(e) => {
-            e.preventDefault();
-            start(curriculumHref, { x: e.clientX, y: e.clientY });
-          }}
-          className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-brand-secondary px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-secondary/25 transition-colors hover:bg-brand-secondary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary focus-visible:ring-offset-2"
+        <motion.div
+          variants={centreCtaReveal}
+          initial={ready ? "initial" : false}
+          animate={ready ? "animate" : false}
+          className="mt-5"
         >
-          Start the journey
-          <ArrowRight className="size-4" />
-        </Link>
-      </motion.div>
+          <Link
+            href={curriculumHref}
+            onClick={(e) => {
+              e.preventDefault();
+              start(curriculumHref, { x: e.clientX, y: e.clientY });
+            }}
+            className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-brand-secondary px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-secondary/25 transition-colors hover:bg-brand-secondary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary focus-visible:ring-offset-2"
+          >
+            Start the journey
+            <ArrowRight className="size-4" />
+          </Link>
+        </motion.div>
+      </div>
     </motion.div>
   );
 }
