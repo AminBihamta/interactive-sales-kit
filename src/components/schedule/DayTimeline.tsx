@@ -86,10 +86,6 @@ export function DayTimeline({ schedule }: DayTimelineProps) {
 
   return (
     <div className="space-y-6">
-      <p className="rounded-xl bg-brand-primary/5 px-4 py-3 text-sm text-muted-foreground">
-        {schedule.disclaimer}
-      </p>
-
       <div className="flex flex-col gap-6 lg:flex-row">
         <div className="relative flex-1">
           <div
