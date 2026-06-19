@@ -73,6 +73,25 @@ export interface SchedulesContent {
   programmes: Record<ProgrammeScheduleKey, ProgrammeSchedule>;
 }
 
+export interface ScheduleProgrammeOption {
+  id: string;
+  label: string;
+  blocks: ScheduleBlock[];
+}
+
+export interface CentreSchedulesConfig {
+  slug: string;
+  title?: string;
+  disclaimer?: string;
+  programmes: ScheduleProgrammeOption[];
+}
+
+export interface ScheduleExplorerContent {
+  title: string;
+  disclaimer: string;
+  programmes: ScheduleProgrammeOption[];
+}
+
 export interface FeeTier {
   ageGroup: string;
   programmeType: "Half Day" | "Extended Day" | "Full Day";

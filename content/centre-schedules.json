@@ -1,0 +1,397 @@
+{
+  "centres": [
+    {
+      "slug": "mutiara-damansara",
+      "programmes": [
+        {
+          "id": "infant-pre-tots",
+          "label": "Infant and Pre-Tots",
+          "blocks": [
+            {
+              "id": "arrival",
+              "time": "Arrival – 9:30 AM",
+              "title": "Breakfast / Free choice",
+              "description": "",
+              "icon": "sunrise"
+            },
+            {
+              "id": "sunshine-tots",
+              "time": "9:30 – 10:00 AM",
+              "title": "Sunshine Tots",
+              "description": "",
+              "icon": "users"
+            },
+            {
+              "id": "snack",
+              "time": "10:00 – 10:10 AM",
+              "title": "Snack / Juice Time",
+              "description": "",
+              "icon": "apple"
+            },
+            {
+              "id": "tots-music",
+              "time": "10:10 – 10:30 AM",
+              "title": "Tots Music",
+              "description": "",
+              "icon": "palette"
+            },
+            {
+              "id": "sensory-play",
+              "time": "10:30 – 11:00 AM",
+              "title": "Tots Sensory Play / Tots Art / Tots Gym",
+              "description": "",
+              "icon": "blocks"
+            },
+            {
+              "id": "lunch",
+              "time": "11:00 – 11:30 AM",
+              "title": "Lunch (Clean Up and Diapering)",
+              "description": "",
+              "icon": "utensils"
+            },
+            {
+              "id": "tots-read",
+              "time": "11:30 AM – 12:00 PM",
+              "title": "Tots Read / Tots Music / Free Choice",
+              "description": "",
+              "icon": "users"
+            },
+            {
+              "id": "farewell-midday",
+              "time": "12:00 – 12:15 PM",
+              "title": "Farewell",
+              "description": "",
+              "icon": "home"
+            },
+            {
+              "id": "wash-up",
+              "time": "12:15 – 12:45 PM",
+              "title": "Wash Up Time",
+              "description": "",
+              "icon": "blocks"
+            },
+            {
+              "id": "nap-prep",
+              "time": "12:45 – 1:15 PM",
+              "title": "Milk Time / Nap Preparation",
+              "description": "",
+              "icon": "coffee"
+            },
+            {
+              "id": "nap",
+              "time": "1:15 – 3:00 PM",
+              "title": "Nap Time",
+              "description": "",
+              "icon": "moon"
+            },
+            {
+              "id": "afternoon-snack",
+              "time": "3:00 – 3:30 PM",
+              "title": "Snack Time / Clean Up",
+              "description": "",
+              "icon": "apple"
+            },
+            {
+              "id": "baby-activities",
+              "time": "3:30 – 5:00 PM",
+              "title": "Baby Gym / Baby Touch / Baby Music / Baby Read",
+              "description": "",
+              "icon": "palette"
+            },
+            {
+              "id": "farewell",
+              "time": "5:00 – 6:00 PM",
+              "title": "Free Play / Farewell",
+              "description": "",
+              "icon": "home"
+            }
+          ]
+        },
+        {
+          "id": "toddler",
+          "label": "Toddler",
+          "blocks": [
+            {
+              "id": "arrival",
+              "time": "Arrival – 9:30 AM",
+              "title": "Breakfast / Free choice",
+              "description": "",
+              "icon": "sunrise"
+            },
+            {
+              "id": "playtime-morning",
+              "time": "9:30 – 10:00 AM",
+              "title": "Playtime",
+              "description": "",
+              "icon": "tree"
+            },
+            {
+              "id": "snack",
+              "time": "10:00 – 10:10 AM",
+              "title": "Snack / Juice Time",
+              "description": "",
+              "icon": "apple"
+            },
+            {
+              "id": "circle",
+              "time": "10:10 – 10:30 AM",
+              "title": "Circle Time",
+              "description": "",
+              "icon": "users"
+            },
+            {
+              "id": "presentations-morning",
+              "time": "10:30 – 11:00 AM",
+              "title": "Individual / Group Presentations",
+              "description": "",
+              "icon": "blocks"
+            },
+            {
+              "id": "lunch",
+              "time": "11:00 – 11:30 AM",
+              "title": "Lunch (Clean Up and Diapering)",
+              "description": "",
+              "icon": "utensils"
+            },
+            {
+              "id": "music-story",
+              "time": "11:30 AM – 12:00 PM",
+              "title": "Music & Movement / Story Time / Phonics / Free Choice",
+              "description": "",
+              "icon": "palette"
+            },
+            {
+              "id": "farewell-midday",
+              "time": "12:00 – 12:15 PM",
+              "title": "Farewell",
+              "description": "",
+              "icon": "home"
+            },
+            {
+              "id": "wash-up",
+              "time": "12:15 – 12:45 PM",
+              "title": "Wash Up Time",
+              "description": "",
+              "icon": "blocks"
+            },
+            {
+              "id": "nap-prep",
+              "time": "12:45 – 1:15 PM",
+              "title": "Milk Time / Nap Preparation",
+              "description": "",
+              "icon": "coffee"
+            },
+            {
+              "id": "nap",
+              "time": "1:15 – 3:00 PM",
+              "title": "Nap Time",
+              "description": "",
+              "icon": "moon"
+            },
+            {
+              "id": "afternoon-snack",
+              "time": "3:00 – 3:30 PM",
+              "title": "Snack Time / Clean Up",
+              "description": "",
+              "icon": "apple"
+            },
+            {
+              "id": "creative-play",
+              "time": "3:30 – 5:00 PM",
+              "title": "Music & Movement / Creative Play / Story Time / Role Play Dressing Up / Art & Craft / Games",
+              "description": "",
+              "icon": "palette"
+            },
+            {
+              "id": "farewell",
+              "time": "5:00 – 6:00 PM",
+              "title": "Free Play / Farewell",
+              "description": "",
+              "icon": "home"
+            }
+          ]
+        },
+        {
+          "id": "nursery",
+          "label": "Nursery",
+          "blocks": [
+            {
+              "id": "arrival",
+              "time": "Arrival – 9:15 AM",
+              "title": "Breakfast / Free choice",
+              "description": "",
+              "icon": "sunrise"
+            },
+            {
+              "id": "circle",
+              "time": "9:15 – 9:30 AM",
+              "title": "Circle Time",
+              "description": "",
+              "icon": "users"
+            },
+            {
+              "id": "presentations-1",
+              "time": "9:30 – 10:00 AM",
+              "title": "Individual / Group Presentations / Free choice",
+              "description": "",
+              "icon": "blocks"
+            },
+            {
+              "id": "playtime",
+              "time": "10:00 – 10:30 AM",
+              "title": "Playtime",
+              "description": "",
+              "icon": "tree"
+            },
+            {
+              "id": "presentations-2",
+              "time": "10:30 – 11:30 AM",
+              "title": "Individual / Group Presentations / Free choice",
+              "description": "",
+              "icon": "blocks"
+            },
+            {
+              "id": "lunch",
+              "time": "11:30 AM – 12:00 PM",
+              "title": "Lunch / Clean Up",
+              "description": "",
+              "icon": "utensils"
+            },
+            {
+              "id": "story",
+              "time": "12:00 – 12:30 PM",
+              "title": "Story Time / Free Choice",
+              "description": "",
+              "icon": "users"
+            },
+            {
+              "id": "farewell-midday",
+              "time": "12:30 – 12:45 PM",
+              "title": "Farewell",
+              "description": "",
+              "icon": "home"
+            },
+            {
+              "id": "nap-prep",
+              "time": "12:55 – 1:30 PM",
+              "title": "Milk Time / Nap Preparation",
+              "description": "",
+              "icon": "coffee"
+            },
+            {
+              "id": "snack",
+              "time": "3:00 – 3:30 PM",
+              "title": "Snack Time",
+              "description": "",
+              "icon": "apple"
+            },
+            {
+              "id": "creative",
+              "time": "3:30 – 5:00 PM",
+              "title": "Creative Activities — Art & Craft / Role Play / Dressing Up / Music & Movement / Story Telling / Games",
+              "description": "",
+              "icon": "palette"
+            },
+            {
+              "id": "farewell",
+              "time": "5:00 – 6:00 PM",
+              "title": "Playtime / Free Choice / Farewell",
+              "description": "",
+              "icon": "home"
+            }
+          ]
+        },
+        {
+          "id": "kindergarten",
+          "label": "Kindergarten",
+          "blocks": [
+            {
+              "id": "arrival",
+              "time": "Arrival – 9:15 AM",
+              "title": "Breakfast / Free choice",
+              "description": "",
+              "icon": "sunrise"
+            },
+            {
+              "id": "circle",
+              "time": "9:15 – 9:30 AM",
+              "title": "Circle Time",
+              "description": "",
+              "icon": "users"
+            },
+            {
+              "id": "presentations",
+              "time": "9:30 – 11:30 AM",
+              "title": "Individual / Group Presentations / Free choice",
+              "description": "",
+              "icon": "blocks"
+            },
+            {
+              "id": "playtime",
+              "time": "11:30 AM – 12:00 PM",
+              "title": "Playtime",
+              "description": "",
+              "icon": "tree"
+            },
+            {
+              "id": "lunch",
+              "time": "12:00 – 12:30 PM",
+              "title": "Lunch (Clean Up)",
+              "description": "",
+              "icon": "utensils"
+            },
+            {
+              "id": "story",
+              "time": "12:30 – 1:00 PM",
+              "title": "Story Time / Free Choice",
+              "description": "",
+              "icon": "users"
+            },
+            {
+              "id": "farewell-midday",
+              "time": "1:00 – 1:15 PM",
+              "title": "Farewell",
+              "description": "",
+              "icon": "home"
+            },
+            {
+              "id": "nap-prep",
+              "time": "1:15 – 1:45 PM",
+              "title": "Nap Preparation",
+              "description": "",
+              "icon": "coffee"
+            },
+            {
+              "id": "nap",
+              "time": "1:45 – 3:00 PM",
+              "title": "Nap Time",
+              "description": "",
+              "icon": "moon"
+            },
+            {
+              "id": "snack",
+              "time": "3:00 – 3:30 PM",
+              "title": "Snack Time",
+              "description": "",
+              "icon": "apple"
+            },
+            {
+              "id": "creative",
+              "time": "3:30 – 5:00 PM",
+              "title": "Creative Activities — Art & Craft / Role Play / Dressing Up / Music & Movement / Story Telling / Games",
+              "description": "",
+              "icon": "palette"
+            },
+            {
+              "id": "farewell",
+              "time": "5:00 – 6:00 PM",
+              "title": "Playtime / Free Choice / Farewell",
+              "description": "",
+              "icon": "home"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getCentreBySlug, getProgrammes, getSchedules } from "@/lib/centres";
+import { getCentreBySlug, getScheduleExplorerContent } from "@/lib/centres";
 import { CentreHeader } from "@/components/journey/CentreHeader";
 import { ScheduleExplorer } from "@/components/schedule/ScheduleExplorer";
 
@@ -15,18 +15,13 @@ export default async function SchedulePage({ params }: PageProps) {
     notFound();
   }
 
-  const schedules = getSchedules();
-  const programmes = getProgrammes();
+  const scheduleContent = getScheduleExplorerContent(slug, centre);
 
   return (
     <div>
       <CentreHeader centre={centre} />
-      <h2 className="mb-6 text-2xl font-bold">{schedules.title}</h2>
-      <ScheduleExplorer
-        centre={centre}
-        schedules={schedules}
-        programmes={programmes}
-      />
+      <h2 className="mb-6 text-2xl font-bold">{scheduleContent.title}</h2>
+      <ScheduleExplorer scheduleContent={scheduleContent} />
     </div>
   );
 }

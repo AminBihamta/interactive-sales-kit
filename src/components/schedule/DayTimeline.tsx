@@ -147,9 +147,11 @@ export function DayTimeline({ schedule }: DayTimelineProps) {
               {active.time}
             </p>
             <h3 className="mt-2 text-2xl font-bold">{active.title}</h3>
-            <p className="mt-3 leading-relaxed text-muted-foreground">
-              {active.description}
-            </p>
+            {active.description ? (
+              <p className="mt-3 leading-relaxed text-muted-foreground">
+                {active.description}
+              </p>
+            ) : null}
             <AnimatePresence>
               {activeIndex < schedule.blocks.length - 1 && (
                 <motion.div
