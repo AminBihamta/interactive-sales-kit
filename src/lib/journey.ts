@@ -1,12 +1,16 @@
 import type { JourneyStep, JourneyStepId } from "./types";
 
+export const REGISTER_STEP_ENABLED = false;
+
 export const JOURNEY_STEPS: JourneyStep[] = [
   { id: "home", label: "Home", href: "" },
   { id: "curriculum", label: "Curriculum", href: "curriculum" },
   { id: "programmes", label: "Programmes", href: "programmes" },
   { id: "schedule", label: "Schedule", href: "schedule" },
   { id: "fees", label: "Fees", href: "fees" },
-  { id: "register", label: "Register", href: "register" },
+  ...(REGISTER_STEP_ENABLED
+    ? [{ id: "register" as const, label: "Register", href: "register" }]
+    : []),
 ];
 
 export function getJourneyHref(slug: string, step: JourneyStep): string {

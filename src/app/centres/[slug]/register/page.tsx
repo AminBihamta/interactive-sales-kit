@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { getCentreBySlug } from "@/lib/centres";
+import { REGISTER_STEP_ENABLED } from "@/lib/journey";
 import { CentreHeader } from "@/components/journey/CentreHeader";
 import { EnquiryForm } from "@/components/register/EnquiryForm";
 
@@ -12,6 +13,10 @@ export default async function RegisterPage({ params }: PageProps) {
   const centre = getCentreBySlug(slug);
 
   if (!centre) {
+    notFound();
+  }
+
+  if (!REGISTER_STEP_ENABLED) {
     notFound();
   }
 

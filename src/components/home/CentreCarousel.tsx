@@ -1,9 +1,8 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import useEmblaCarousel from "embla-carousel-react";
-import type { EmblaCarouselType } from "embla-carousel";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { carouselSlide } from "@/lib/animations";
 import type { Centre } from "@/lib/types";
@@ -14,16 +13,6 @@ interface CentreCarouselProps {
   filterKey: string;
 }
 
-function getSnapState(emblaApi: EmblaCarouselType) {
-  const engine = emblaApi.internalEngine();
-  const index = engine.index.get();
-  const snaps = emblaApi.scrollSnapList();
-  const current = engine.location.get();
-  const snapTarget = snaps[index] ?? 0;
-  const minDistance = Math.abs(snapTarget - current);
-  return { index, minDistance };
-}
-
 export function CentreCarousel({ centres, filterKey }: CentreCarouselProps) {
   const reducedMotion = useReducedMotion();
   const [ready, setReady] = useState(false);
@@ -31,56 +20,32 @@ export function CentreCarousel({ centres, filterKey }: CentreCarouselProps) {
     align: "center",
     loop: centres.length > 1,
     containScroll: false,
-    dragFree: true,
+    watchDrag: false,
+    duration: 0,
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const lastSnapRef = useRef<number | null>(null);
 
   useEffect(() => {
     setReady(true);
   }, []);
 
-  const commitSelectedIndex = useCallback(
-    (embla: EmblaCarouselType) => {
-      setSelectedIndex(getSnapState(embla).index);
-    },
-    [],
-  );
-
-  const onSettle = useCallback(() => {
+  const syncSelectedIndex = useCallback(() => {
     if (!emblaApi) return;
-    const { index, minDistance } = getSnapState(emblaApi);
-    const alreadySnapped =
-      minDistance < 1 || lastSnapRef.current === index;
-
-    commitSelectedIndex(emblaApi);
-
-    if (alreadySnapped) {
-      lastSnapRef.current = null;
-      return;
-    }
-
-    lastSnapRef.current = index;
-    emblaApi.scrollTo(index, true);
-  }, [emblaApi, commitSelectedIndex]);
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
 
   useEffect(() => {
     if (!emblaApi) return;
-    const resetSnapGuard = () => {
-      lastSnapRef.current = null;
-    };
-    const onReInit = () => commitSelectedIndex(emblaApi);
 
-    commitSelectedIndex(emblaApi);
-    emblaApi.on("pointerDown", resetSnapGuard);
-    emblaApi.on("settle", onSettle);
-    emblaApi.on("reInit", onReInit);
+    syncSelectedIndex();
+    emblaApi.on("select", syncSelectedIndex);
+    emblaApi.on("reInit", syncSelectedIndex);
+
     return () => {
-      emblaApi.off("pointerDown", resetSnapGuard);
-      emblaApi.off("settle", onSettle);
-      emblaApi.off("reInit", onReInit);
+      emblaApi.off("select", syncSelectedIndex);
+      emblaApi.off("reInit", syncSelectedIndex);
     };
-  }, [emblaApi, commitSelectedIndex, onSettle]);
+  }, [emblaApi, syncSelectedIndex]);
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -90,26 +55,20 @@ export function CentreCarousel({ centres, filterKey }: CentreCarouselProps) {
   }, [emblaApi, filterKey, centres.length]);
 
   const scrollPrev = useCallback(() => {
-    if (!emblaApi) return;
-    lastSnapRef.current = null;
-    emblaApi.scrollPrev();
+    emblaApi?.scrollPrev(true);
   }, [emblaApi]);
 
   const scrollNext = useCallback(() => {
-    if (!emblaApi) return;
-    lastSnapRef.current = null;
-    emblaApi.scrollNext();
+    emblaApi?.scrollNext(true);
   }, [emblaApi]);
 
   const scrollToIndex = useCallback(
     (index: number) => {
       if (!emblaApi || index === selectedIndex) return;
-      lastSnapRef.current = null;
       emblaApi.scrollTo(index, true);
-      // Instant scroll does not emit "settle", so update highlight here.
-      commitSelectedIndex(emblaApi);
+      setSelectedIndex(index);
     },
-    [emblaApi, selectedIndex, commitSelectedIndex],
+    [emblaApi, selectedIndex],
   );
 
   useEffect(() => {
@@ -164,27 +123,27 @@ export function CentreCarousel({ centres, filterKey }: CentreCarouselProps) {
         )}
 
         <div className="w-full overflow-hidden" ref={emblaRef}>
-        <div className="flex touch-pan-y">
-          {centres.map((centre, index) => (
-            <motion.div
-              key={centre.slug}
-              variants={carouselSlide}
-              initial={ready && !reducedMotion ? "initial" : false}
-              animate={ready && !reducedMotion ? "animate" : false}
-              transition={{ delay: reducedMotion ? 0 : 0.5 + index * 0.06 }}
-              className="min-w-0 shrink-0 grow-0 basis-[31%] sm:basis-[30%]"
-            >
-              <div className="h-[min(42vh,400px)]">
-                <CentreSpotlightCard
-                  centre={centre}
-                  isActive={selectedIndex === index}
-                  index={index}
-                  onSelect={scrollToIndex}
-                />
-              </div>
-            </motion.div>
-          ))}
-        </div>
+          <div className="flex">
+            {centres.map((centre, index) => (
+              <motion.div
+                key={centre.slug}
+                variants={carouselSlide}
+                initial={ready && !reducedMotion ? "initial" : false}
+                animate={ready && !reducedMotion ? "animate" : false}
+                transition={{ delay: reducedMotion ? 0 : 0.5 + index * 0.06 }}
+                className="min-w-0 shrink-0 grow-0 basis-[31%] sm:basis-[30%]"
+              >
+                <div className="h-[min(42vh,400px)]">
+                  <CentreSpotlightCard
+                    centre={centre}
+                    isActive={selectedIndex === index}
+                    index={index}
+                    onSelect={scrollToIndex}
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
 

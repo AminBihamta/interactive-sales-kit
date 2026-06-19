@@ -32,7 +32,7 @@ export function CentreSpotlightCard({
         opacity: isActive ? 1 : 0.55,
         filter: isActive ? "brightness(1)" : "brightness(0.9)",
       }}
-      transition={{ type: "spring", stiffness: 300, damping: 28 }}
+      transition={{ type: "spring", stiffness: 420, damping: 32 }}
       className="h-full w-full min-w-0"
       aria-current={isActive ? "true" : undefined}
     >
