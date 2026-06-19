@@ -19,26 +19,29 @@ export function isPwaGateEnabled(): boolean {
 export function isMobileOrTabletDevice(): boolean {
   if (typeof window === "undefined") return false;
 
+  const ua = window.navigator.userAgent;
+  const isAndroid = /Android/i.test(ua);
+  const isIosPhone = /iPhone|iPod/i.test(ua);
+  const isIpad =
+    /iPad/i.test(ua) ||
+    (window.navigator.platform === "MacIntel" &&
+      window.navigator.maxTouchPoints > 1);
+  const isOtherMobile =
+    /webOS|BlackBerry|IEMobile|Opera Mini/i.test(ua);
+
+  // UA first — Chrome on Android tablets often reports fine pointer + hover.
+  if (isAndroid || isIosPhone || isIpad || isOtherMobile) return true;
+
   const isDesktopLike = window.matchMedia(
     "(hover: hover) and (pointer: fine) and (min-width: 1024px)",
   ).matches;
 
   if (isDesktopLike) return false;
 
-  const ua = window.navigator.userAgent;
-  const isMobileUa =
-    /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
-
-  const isIpad =
-    /iPad/.test(ua) ||
-    (window.navigator.platform === "MacIntel" &&
-      window.navigator.maxTouchPoints > 1);
-
-  if (isMobileUa || isIpad) return true;
-
   return (
     window.matchMedia("(max-width: 1024px)").matches &&
-    window.matchMedia("(pointer: coarse)").matches
+    (window.matchMedia("(pointer: coarse)").matches ||
+      window.navigator.maxTouchPoints > 0)
   );
 }
 
