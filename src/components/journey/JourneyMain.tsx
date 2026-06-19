@@ -16,7 +16,7 @@ export function JourneyMain({ children }: JourneyMainProps) {
     <main
       className={cn(
         isHome
-          ? "h-full min-h-0 overflow-hidden"
+          ? "flex min-h-0 flex-1 flex-col overflow-hidden"
           : "mx-auto max-w-5xl px-6 py-8",
       )}
     >

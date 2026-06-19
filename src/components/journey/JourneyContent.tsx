@@ -15,10 +15,9 @@ export function JourneyContent({ children }: JourneyContentProps) {
   return (
     <div
       className={cn(
-        isHome ? undefined : "max-h-[calc(100dvh-40px)]",
         isHome
-          ? "h-[calc(100dvh-var(--journey-nav-height))] max-h-[calc(100dvh-var(--journey-nav-height))] overflow-hidden"
-          : "overflow-y-auto pb-journey",
+          ? "flex min-h-dvh flex-col overflow-hidden"
+          : "max-h-[calc(100dvh-40px)] overflow-y-auto pb-journey",
       )}
     >
       {children}
