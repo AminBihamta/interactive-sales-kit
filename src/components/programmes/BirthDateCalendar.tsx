@@ -127,6 +127,11 @@ export function BirthDateCalendar({
     setStep("day");
   };
 
+  const monthAllowsFlexibleDays =
+    selectedYear !== null &&
+    selectedMonth !== null &&
+    !isMonthInRange(selectedYear, selectedMonth, minDate, maxDate);
+
   const selectDay = (day: Date) => {
     onChange(day);
   };
@@ -182,26 +187,17 @@ export function BirthDateCalendar({
                 <span className="block text-center">Child&apos;s Month of Birth</span>
                 <div className="mt-3 grid grid-cols-3 gap-2">
                   {MONTH_LABELS.map((label, month) => {
-                    const enabled = isMonthInRange(
-                      selectedYear,
-                      month,
-                      minDate,
-                      maxDate,
-                    );
                     const isSelected = selectedMonth === month;
 
                     return (
                       <button
                         key={label}
                         type="button"
-                        disabled={!enabled}
                         onClick={() => selectMonth(month)}
                         className={cn(
                           selectionTileClass,
                           "text-base",
                           isSelected && selectionTileSelectedClass,
-                          !enabled &&
-                            "cursor-not-allowed text-muted-foreground/35 hover:bg-white",
                         )}
                       >
                         {label}
@@ -242,7 +238,9 @@ export function BirthDateCalendar({
                 return <span key={`empty-${index}`} aria-hidden="true" />;
               }
 
-              const selectable = isWithinRange(day, minDate, maxDate);
+              const selectable =
+                monthAllowsFlexibleDays ||
+                isWithinRange(day, minDate, maxDate);
               const selected = isSameDay(day, value);
               const isToday = isSameDay(day, new Date());
 

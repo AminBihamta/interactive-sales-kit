@@ -126,6 +126,14 @@ export function getProgrammeForAge(
   ) {
     return "playgroup";
   }
+
+  // Below minimum ages — highlight the entry programme (lowest from age).
+  if (centre.programmes.playgroup.available) {
+    return "playgroup";
+  }
+  if (centre.programmes.junior.available) {
+    return "junior";
+  }
   return null;
 }
 
