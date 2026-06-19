@@ -17,7 +17,7 @@ export default async function RegisterPage({ params }: PageProps) {
 
   return (
     <div>
-      <CentreHeader centre={centre} />
+      <CentreHeader centre={centre} align="center" />
       <div className="mb-8 text-center">
         <h2 className="text-2xl font-bold">Confirm your interest</h2>
         <p className="mt-2 text-muted-foreground">
