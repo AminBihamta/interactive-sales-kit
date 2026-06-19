@@ -1,0 +1,92 @@
+{
+  "ampang": {
+    "name": "Ampang",
+    "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/01/Frame-10-1.png",
+    "address": "7, Jalan Ampang Hilir, Taman U Thant, 55000 Kuala Lumpur, Wilayah Persekutuan, Malaysia",
+    "localPath": "/images/centres/ampang.png"
+  },
+  "bangsar": {
+    "name": "Bangsar",
+    "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/01/Frame-10.png",
+    "address": "53, Jalan Terasek, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+    "localPath": "/images/centres/bangsar.png"
+  },
+  "bruas": {
+    "name": "Bruas",
+    "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/01/Frame-10-2.png",
+    "address": "38, Jalan Bruas, Bukit Damansara, 50490 Kuala Lumpur, Wilayah Persekutuan",
+    "localPath": "/images/centres/bruas.png"
+  },
+  "mont-kiara": {
+    "name": "Mont Kiara",
+    "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/01/Frame-10-3.png",
+    "address": "Lot 15229, Jalan Duta Kiara, Dutamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia.",
+    "localPath": "/images/centres/mont-kiara.png"
+  },
+  "ttdi": {
+    "name": "TTDI",
+    "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/01/Frame-10-4.png",
+    "address": "154, Pinggir Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan, Malaysia.",
+    "localPath": "/images/centres/ttdi.png"
+  },
+  "ttdi-2-junior": {
+    "name": "TTDI 2 Junior",
+    "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/01/Frame-10-5.png",
+    "address": "43, Persiaran Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+    "localPath": "/images/centres/ttdi-2-junior.png"
+  },
+  "ttdi-2-senior": {
+    "name": "TTDI 2 Senior",
+    "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/01/Frame-10-6.png",
+    "address": "43, Persiaran Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+    "localPath": "/images/centres/ttdi-2-senior.png"
+  },
+  "bukit-jalil-city": {
+    "name": "Bukit Jalil City",
+    "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/01/Frame-10-9.png",
+    "address": "Signature Shop Office, K3A-1 &amp; K3A-M, Jalan Persiaran Jalil 1, Bukit Jalil, 57000 Kuala Lumpur",
+    "localPath": "/images/centres/bukit-jalil-city.png"
+  },
+  "taman-oug": {
+    "name": "Taman OUG",
+    "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/03/Taman-OUG-Scaled-2.png",
+    "address": "39, Jalan Hujan Emas, Taman Overseas Union, 58200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+    "localPath": "/images/centres/taman-oug.png"
+  },
+  "u-thant": {
+    "name": "U-Thant",
+    "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/01/Frame-10-8.png",
+    "address": "11, Jalan U Thant, Kelab Golf di Raja Selangor, 55000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+    "localPath": "/images/centres/u-thant.png"
+  },
+  "maisson-ara-damansara": {
+    "name": "Maisson Ara Damansara",
+    "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/01/Frame-10-10.png",
+    "address": "Lot 01-02 ,02-17, 02-18, 02-19 &amp; 02-20, Maisson by the Park, Jalan PJU 1a/3, Ara Damansara, 47301 Petaling Jaya, Selangor",
+    "localPath": "/images/centres/maisson-ara-damansara.png"
+  },
+  "cyberjaya": {
+    "name": "Cyberjaya",
+    "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/01/Frame-10-1-2.png",
+    "address": "F-00-01, Camerata, Shaftsbury, Jalan Impact, Shaftsbury Square, 63000 Cyberjaya, Selangor",
+    "localPath": "/images/centres/cyberjaya.png"
+  },
+  "16-sierra": {
+    "name": "16 Sierra",
+    "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/01/image.png",
+    "address": "No.37, Jalan Sierra 10/1,Bandar 16 Sierra, 47120 Puchong, Selangor",
+    "localPath": "/images/centres/16-sierra.png"
+  },
+  "setia-alam": {
+    "name": "Setia Alam",
+    "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/01/Frame-10-2-1.png",
+    "address": "No 2 &amp; 4, Jalan Setia Indah U13/11n, Setia Alam, 40170 Shah Alam, Selangor",
+    "localPath": "/images/centres/setia-alam.png"
+  },
+  "mutiara-damansara": {
+    "name": "Mutiara Damansara",
+    "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/07/TCH-2014-84-of-771-1.jpg",
+    "address": "Level 1, 1, Jalan PJU 7/12, Mutiara Damansara, 47800 Petaling Jaya, Selangor",
+    "localPath": "/images/centres/mutiara-damansara.jpg"
+  }
+}

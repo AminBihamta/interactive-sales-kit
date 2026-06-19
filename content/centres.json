@@ -1,0 +1,514 @@
+{
+  "centres": [
+    {
+      "id": "ampang",
+      "slug": "ampang",
+      "name": "Ampang",
+      "region": "KL",
+      "address": "7, Jalan Ampang Hilir, Taman U Thant, 55000 Kuala Lumpur, Wilayah Persekutuan, Malaysia",
+      "heroTagline": "Nurturing Young Minds Since 1986",
+      "intro": "Nestled in a well-established residential area, our Ampang centre offers a warm Montessori environment where children from 18 months to 6 years develop independence, confidence, and a lifelong love of learning.",
+      "ageRange": "18 months – 6 years",
+      "image": "/images/centres/ampang.png",
+      "gallery": [
+        "/images/centres/ampang.png"
+      ],
+      "programmes": {
+        "playgroup": {
+          "available": true,
+          "ageRange": "18 months – 2.5 years",
+          "description": "Infant care and pre-toddler programme with sensory-rich Montessori activities."
+        },
+        "junior": {
+          "available": true,
+          "ageRange": "2.6 – 6 years",
+          "description": "Nursery and preparatory programme focused on school readiness."
+        }
+      },
+      "playgroupMinAgeMonths": 18,
+      "feesAvailable": true,
+      "usps": [
+        "Complete Montessori Method",
+        "Purpose-built classrooms",
+        "Experienced directresses"
+      ],
+      "websiteUrl": "https://www.thechildrenshouse.com.my/ampang/"
+    },
+    {
+      "id": "bangsar",
+      "slug": "bangsar",
+      "name": "Bangsar",
+      "region": "KL",
+      "address": "53, Jalan Terasek, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+      "heroTagline": "Nurturing Young Minds Since 1986",
+      "intro": "Located in the heart of Bangsar, our centre provides a nurturing Montessori environment with spacious classrooms designed for self-directed learning and holistic development.",
+      "ageRange": "8 months – 6 years",
+      "image": "/images/centres/bangsar.png",
+      "gallery": [
+        "/images/centres/bangsar.png"
+      ],
+      "programmes": {
+        "playgroup": {
+          "available": true,
+          "ageRange": "8 months – 2.5 years",
+          "description": "Early years programme with dedicated infant and toddler areas."
+        },
+        "junior": {
+          "available": true,
+          "ageRange": "2.6 – 6 years",
+          "description": "Comprehensive nursery and preparatory curriculum."
+        }
+      },
+      "playgroupMinAgeMonths": 8,
+      "feesAvailable": true,
+      "usps": [
+        "Central Bangsar location",
+        "Award-winning programme",
+        "Strong parent community"
+      ],
+      "websiteUrl": "https://www.thechildrenshouse.com.my/bangsar/"
+    },
+    {
+      "id": "bruas",
+      "slug": "bruas",
+      "name": "Bruas",
+      "region": "KL",
+      "address": "38, Jalan Bruas, Bukit Damansara, 50490 Kuala Lumpur, Wilayah Persekutuan",
+      "heroTagline": "Nurturing Young Minds Since 1986",
+      "intro": "Our Bruas centre in Bukit Damansara offers premium Montessori education from 3 months, with thoughtfully prepared environments that inspire curiosity and independence.",
+      "ageRange": "3 months – 6 years",
+      "image": "/images/centres/bruas.png",
+      "gallery": [
+        "/images/centres/bruas.png"
+      ],
+      "programmes": {
+        "playgroup": {
+          "available": true,
+          "ageRange": "3 months – 2.5 years",
+          "description": "Infant care from 3 months with low teacher ratios."
+        },
+        "junior": {
+          "available": true,
+          "ageRange": "2.6 – 6 years",
+          "description": "Nursery and preparatory with STEAM integration."
+        }
+      },
+      "playgroupMinAgeMonths": 3,
+      "feesAvailable": true,
+      "usps": [
+        "Infant care from 3 months",
+        "Bukit Damansara location",
+        "Premium facilities"
+      ],
+      "websiteUrl": "https://www.thechildrenshouse.com.my/bruas/"
+    },
+    {
+      "id": "bukit-jalil-city",
+      "slug": "bukit-jalil-city",
+      "name": "Bukit Jalil City",
+      "region": "KL",
+      "address": "Signature Shop Office, K3A-1 &amp; K3A-M, Jalan Persiaran Jalil 1, Bukit Jalil, 57000 Kuala Lumpur",
+      "heroTagline": "Nurturing Young Minds Since 1986",
+      "intro": "A modern Montessori preschool in Bukit Jalil City, offering award-winning early childhood education in a vibrant, child-centric environment.",
+      "ageRange": "8 months – 6 years",
+      "image": "/images/centres/bukit-jalil-city.png",
+      "gallery": [
+        "/images/centres/bukit-jalil-city.png"
+      ],
+      "programmes": {
+        "playgroup": {
+          "available": true,
+          "ageRange": "8 months – 2.5 years",
+          "description": "Toddler programme with sensory exploration and motor development."
+        },
+        "junior": {
+          "available": true,
+          "ageRange": "2.6 – 6 years",
+          "description": "School readiness programme with critical thinking focus."
+        }
+      },
+      "playgroupMinAgeMonths": 8,
+      "feesAvailable": true,
+      "usps": [
+        "Modern city location",
+        "Outdoor play areas",
+        "STEAM curriculum"
+      ],
+      "websiteUrl": "https://www.thechildrenshouse.com.my/bukit-jalil-city/"
+    },
+    {
+      "id": "mont-kiara",
+      "slug": "mont-kiara",
+      "name": "Mont Kiara",
+      "region": "KL",
+      "address": "Lot 15229, Jalan Duta Kiara, Dutamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia.",
+      "heroTagline": "Nurturing Young Minds Since 1986",
+      "intro": "Our Mont Kiara centre features expansive 14,000 sq ft facilities with outdoor playgrounds and water play, serving families from 3 months to 6 years.",
+      "ageRange": "3 months – 6 years",
+      "image": "/images/centres/mont-kiara.png",
+      "gallery": [
+        "/images/centres/mont-kiara.png"
+      ],
+      "programmes": {
+        "playgroup": {
+          "available": true,
+          "ageRange": "3 months – 2.5 years",
+          "description": "Premium infant and toddler care with dedicated nursing rooms."
+        },
+        "junior": {
+          "available": true,
+          "ageRange": "2.6 – 6 years",
+          "description": "Nursery and preparatory in spacious Montessori classrooms."
+        }
+      },
+      "playgroupMinAgeMonths": 3,
+      "feesAvailable": true,
+      "usps": [
+        "14,000 sq ft facilities",
+        "Water play area",
+        "Expatriate-friendly community"
+      ],
+      "websiteUrl": "https://www.thechildrenshouse.com.my/mont-kiara/"
+    },
+    {
+      "id": "taman-oug",
+      "slug": "taman-oug",
+      "name": "Taman OUG",
+      "region": "KL",
+      "address": "39, Jalan Hujan Emas, Taman Overseas Union, 58200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+      "heroTagline": "Nurturing Young Minds Since 1986",
+      "intro": "A community-focused Montessori preschool in Taman OUG, providing quality early childhood education in a safe, nurturing environment.",
+      "ageRange": "8 months – 6 years",
+      "image": "/images/centres/taman-oug.png",
+      "gallery": [
+        "/images/centres/taman-oug.png"
+      ],
+      "programmes": {
+        "playgroup": {
+          "available": true,
+          "ageRange": "8 months – 2.5 years",
+          "description": "Early years with focus on sensory and motor development."
+        },
+        "junior": {
+          "available": true,
+          "ageRange": "2.6 – 6 years",
+          "description": "Preparatory programme building school readiness skills."
+        }
+      },
+      "playgroupMinAgeMonths": 8,
+      "feesAvailable": false,
+      "usps": [
+        "Established neighbourhood",
+        "Warm community feel",
+        "Complete Montessori curriculum"
+      ],
+      "websiteUrl": "https://www.thechildrenshouse.com.my/taman-oug/"
+    },
+    {
+      "id": "ttdi",
+      "slug": "ttdi",
+      "name": "TTDI",
+      "region": "KL",
+      "address": "154, Pinggir Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan, Malaysia.",
+      "heroTagline": "Nurturing Young Minds Since 1986",
+      "intro": "Our TTDI centre serves the TTDI community with both Playgroup and Junior programmes in a thoughtfully prepared Montessori environment.",
+      "ageRange": "18 months – 6 years",
+      "image": "/images/centres/ttdi.png",
+      "gallery": [
+        "/images/centres/ttdi.png"
+      ],
+      "programmes": {
+        "playgroup": {
+          "available": true,
+          "ageRange": "18 months – 2.5 years",
+          "description": "Toddler programme with Montessori practical life activities."
+        },
+        "junior": {
+          "available": true,
+          "ageRange": "2.6 – 6 years",
+          "description": "Nursery and preparatory with individualised learning paths."
+        }
+      },
+      "playgroupMinAgeMonths": 18,
+      "feesAvailable": false,
+      "usps": [
+        "TTDI community hub",
+        "Both programmes available",
+        "Experienced team"
+      ],
+      "websiteUrl": "https://www.thechildrenshouse.com.my/ttdi/"
+    },
+    {
+      "id": "ttdi-2-junior",
+      "slug": "ttdi-2-junior",
+      "name": "TTDI 2 (Playgroup)",
+      "region": "KL",
+      "address": "43, Persiaran Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+      "heroTagline": "Nurturing Young Minds Since 1986",
+      "intro": "TTDI 2 Playgroup centre dedicated to infant care and pre-toddler education from 8 months, with low teacher-to-child ratios.",
+      "ageRange": "8 months – 2.5 years",
+      "image": "/images/centres/ttdi-2-junior.png",
+      "gallery": [
+        "/images/centres/ttdi-2-junior.png"
+      ],
+      "programmes": {
+        "playgroup": {
+          "available": true,
+          "ageRange": "8 months – 2.5 years",
+          "description": "Dedicated playgroup-only centre for early years."
+        },
+        "junior": {
+          "available": false,
+          "ageRange": "N/A",
+          "description": "Junior programme available at TTDI 2 Senior centre."
+        }
+      },
+      "playgroupMinAgeMonths": 8,
+      "feesAvailable": true,
+      "usps": [
+        "Playgroup specialist centre",
+        "Low teacher ratios",
+        "Purpose-built toddler areas"
+      ],
+      "websiteUrl": "https://www.thechildrenshouse.com.my/ttdi-2-junior/"
+    },
+    {
+      "id": "ttdi-2-senior",
+      "slug": "ttdi-2-senior",
+      "name": "TTDI 2 (Junior)",
+      "region": "KL",
+      "address": "43, Persiaran Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+      "heroTagline": "Nurturing Young Minds Since 1986",
+      "intro": "TTDI 2 Senior centre focuses on Montessori Junior education for nursery and preparatory children aged 2.6 to 6 years.",
+      "ageRange": "2.6 – 6 years",
+      "image": "/images/centres/ttdi-2-senior.png",
+      "gallery": [
+        "/images/centres/ttdi-2-senior.png"
+      ],
+      "programmes": {
+        "playgroup": {
+          "available": false,
+          "ageRange": "N/A",
+          "description": "Playgroup available at TTDI 2 Playgroup centre."
+        },
+        "junior": {
+          "available": true,
+          "ageRange": "2.6 – 6 years",
+          "description": "Dedicated junior centre for nursery and preparatory."
+        }
+      },
+      "playgroupMinAgeMonths": 31,
+      "feesAvailable": true,
+      "usps": [
+        "Junior specialist centre",
+        "School readiness focus",
+        "STEAM integration"
+      ],
+      "websiteUrl": "https://www.thechildrenshouse.com.my/ttdi-2-senior/"
+    },
+    {
+      "id": "u-thant",
+      "slug": "u-thant",
+      "name": "U-Thant",
+      "region": "KL",
+      "address": "11, Jalan U Thant, Kelab Golf di Raja Selangor, 55000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+      "heroTagline": "Nurturing Young Minds Since 1986",
+      "intro": "Our U-Thant centre offers premium Montessori education in an exclusive diplomatic area, with programmes from 18 months to 6 years.",
+      "ageRange": "18 months – 6 years",
+      "image": "/images/centres/u-thant.png",
+      "gallery": [
+        "/images/centres/u-thant.png"
+      ],
+      "programmes": {
+        "playgroup": {
+          "available": true,
+          "ageRange": "18 months – 3 years",
+          "description": "Toddler programme in a serene, premium setting."
+        },
+        "junior": {
+          "available": true,
+          "ageRange": "4 – 6 years",
+          "description": "Preparatory programme with extended day options."
+        }
+      },
+      "playgroupMinAgeMonths": 18,
+      "feesAvailable": true,
+      "usps": [
+        "Diplomatic area location",
+        "Extended day options",
+        "Premium environment"
+      ],
+      "websiteUrl": "https://www.thechildrenshouse.com.my/u-thant/"
+    },
+    {
+      "id": "16-sierra",
+      "slug": "16-sierra",
+      "name": "16 Sierra",
+      "region": "Selangor",
+      "address": "No.37, Jalan Sierra 10/1,Bandar 16 Sierra, 47120 Puchong, Selangor",
+      "heroTagline": "Nurturing Young Minds Since 1986",
+      "intro": "Serving the 16 Sierra community in Puchong, our centre brings Malaysia's longest-established Montessori preschool to a growing residential hub.",
+      "ageRange": "8 months – 6 years",
+      "image": "/images/centres/16-sierra.png",
+      "gallery": [
+        "/images/centres/16-sierra.png"
+      ],
+      "programmes": {
+        "playgroup": {
+          "available": true,
+          "ageRange": "8 months – 2.5 years",
+          "description": "Early years with Montessori sensory materials."
+        },
+        "junior": {
+          "available": true,
+          "ageRange": "2.6 – 6 years",
+          "description": "Nursery and preparatory with outdoor learning."
+        }
+      },
+      "playgroupMinAgeMonths": 8,
+      "feesAvailable": true,
+      "usps": [
+        "Puchong community",
+        "Modern facilities",
+        "Outdoor learning spaces"
+      ],
+      "websiteUrl": "https://www.thechildrenshouse.com.my/16-sierra/"
+    },
+    {
+      "id": "cyberjaya",
+      "slug": "cyberjaya",
+      "name": "Cyberjaya",
+      "region": "Selangor",
+      "address": "F-00-01, Camerata, Shaftsbury, Jalan Impact, Shaftsbury Square, 63000 Cyberjaya, Selangor",
+      "heroTagline": "Nurturing Young Minds Since 1986",
+      "intro": "Our Cyberjaya centre serves tech hub families with a forward-thinking Montessori and STEAM curriculum in a purpose-built environment.",
+      "ageRange": "8 months – 6 years",
+      "image": "/images/centres/cyberjaya.png",
+      "gallery": [
+        "/images/centres/cyberjaya.png"
+      ],
+      "programmes": {
+        "playgroup": {
+          "available": true,
+          "ageRange": "8 months – 2.5 years",
+          "description": "Early years programme with technology-aware learning."
+        },
+        "junior": {
+          "available": true,
+          "ageRange": "2.6 – 6 years",
+          "description": "STEAM-integrated junior programme."
+        }
+      },
+      "playgroupMinAgeMonths": 8,
+      "feesAvailable": true,
+      "usps": [
+        "Tech hub location",
+        "STEAM focus",
+        "Modern campus"
+      ],
+      "websiteUrl": "https://www.thechildrenshouse.com.my/cyberjaya/"
+    },
+    {
+      "id": "maisson-ara-damansara",
+      "slug": "maisson-ara-damansara",
+      "name": "Maisson Ara Damansara",
+      "region": "Selangor",
+      "address": "Lot 01-02 ,02-17, 02-18, 02-19 &amp; 02-20, Maisson by the Park, Jalan PJU 1a/3, Ara Damansara, 47301 Petaling Jaya, Selangor",
+      "heroTagline": "Nurturing Young Minds Since 1986",
+      "intro": "Featuring expansive 14,000 sq ft facilities, our Ara Damansara centre offers premium Montessori education from 3 months with outdoor and water play.",
+      "ageRange": "3 months – 6 years",
+      "image": "/images/centres/maisson-ara-damansara.png",
+      "gallery": [
+        "/images/centres/maisson-ara-damansara.png"
+      ],
+      "programmes": {
+        "playgroup": {
+          "available": true,
+          "ageRange": "3 months – 2.5 years",
+          "description": "Infant care from 3 months with premium facilities."
+        },
+        "junior": {
+          "available": true,
+          "ageRange": "2.6 – 6 years",
+          "description": "Comprehensive junior programme with outdoor learning."
+        }
+      },
+      "playgroupMinAgeMonths": 3,
+      "feesAvailable": true,
+      "usps": [
+        "14,000 sq ft campus",
+        "Water play",
+        "Infant care from 3 months"
+      ],
+      "websiteUrl": "https://www.thechildrenshouse.com.my/maisson-ara-damansara/"
+    },
+    {
+      "id": "mutiara-damansara",
+      "slug": "mutiara-damansara",
+      "name": "Mutiara Damansara",
+      "region": "Selangor",
+      "address": "Level 1, 1, Jalan PJU 7/12, Mutiara Damansara, 47800 Petaling Jaya, Selangor",
+      "heroTagline": "Nurturing Young Minds Since 1986",
+      "intro": "With 38 years of expertise, our Mutiara Damansara centre features purpose-built facilities including outdoor playground, water play, and a Little Chef Kitchen.",
+      "ageRange": "18 months – 6 years",
+      "image": "/images/centres/mutiara-damansara.jpg",
+      "gallery": [
+        "/images/centres/mutiara-damansara.jpg"
+      ],
+      "programmes": {
+        "playgroup": {
+          "available": true,
+          "ageRange": "18 months – 2.5 years",
+          "description": "Toddler programme with Little Chef Kitchen activities."
+        },
+        "junior": {
+          "available": true,
+          "ageRange": "2.6 – 6 years",
+          "description": "Award-winning junior programme with outdoor learning."
+        }
+      },
+      "playgroupMinAgeMonths": 18,
+      "feesAvailable": false,
+      "usps": [
+        "Little Chef Kitchen",
+        "Water play area",
+        "38 years expertise"
+      ],
+      "websiteUrl": "https://www.thechildrenshouse.com.my/mutiara-damansara/"
+    },
+    {
+      "id": "setia-alam",
+      "slug": "setia-alam",
+      "name": "Setia Alam",
+      "region": "Selangor",
+      "address": "No 2 &amp; 4, Jalan Setia Indah U13/11n, Setia Alam, 40170 Shah Alam, Selangor",
+      "heroTagline": "Nurturing Young Minds Since 1986",
+      "intro": "Our Setia Alam centre serves the growing Setia Alam community with Montessori Playgroup from 8 months and Junior from 3 years.",
+      "ageRange": "8 months – 6 years",
+      "image": "/images/centres/setia-alam.png",
+      "gallery": [
+        "/images/centres/setia-alam.png"
+      ],
+      "programmes": {
+        "playgroup": {
+          "available": true,
+          "ageRange": "8 months – 3 years",
+          "description": "Extended playgroup age range up to 3 years."
+        },
+        "junior": {
+          "available": true,
+          "ageRange": "3 – 6 years",
+          "description": "Junior programme from 3 years."
+        }
+      },
+      "playgroupMinAgeMonths": 8,
+      "feesAvailable": false,
+      "usps": [
+        "Setia Alam community",
+        "Extended playgroup range",
+        "Spacious grounds"
+      ],
+      "websiteUrl": "https://www.thechildrenshouse.com.my/setia-alam/"
+    }
+  ]
+}

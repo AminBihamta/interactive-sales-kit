@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#CD2133" opacity="0.15"/>
+  <rect x="100" y="120" width="600" height="360" rx="24" fill="#4E738A" opacity="0.25"/>
+  <circle cx="400" cy="260" r="60" fill="#CD2133" opacity="0.4"/>
+  <rect x="320" y="340" width="160" height="80" rx="12" fill="#4E738A" opacity="0.5"/>
+  <text x="400" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#4E738A">Gallery 4</text>
+</svg>

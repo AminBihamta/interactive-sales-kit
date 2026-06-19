@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Children's House — Interactive Sales Kit
 
-## Getting Started
+Tablet-first PWA for sales reps to guide parents through centre tours and open days.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16** (App Router, static generation)
+- **shadcn/ui** + **Tailwind CSS v4**
+- **Framer Motion** — page transitions, progress nav, carousels
+- **Embla Carousel** — photo galleries
+- **React Three Fiber** — ambient 3D on location picker
+- **Serwist** — PWA / offline support
+
+## Brand colours
+
+| Token | Hex |
+|-------|-----|
+| Background | `#FFFFFF` |
+| Surface | `#F0F4F1` |
+| Primary | `#CD2133` |
+| Secondary | `#4E738A` |
+| Foreground | `#000000` |
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in landscape tablet viewport (1280×800 recommended).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build & deploy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+Deploy to Vercel:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx vercel
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Journey flow
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Location picker** — 15 public centres (KL + Selangor)
+2. **Home** — photo carousel + centre intro
+3. **Curriculum** — STEAM pillars + Montessori areas
+4. **Programmes** — age matcher + Playgroup/Junior cards
+5. **Schedule** — interactive daily timeline
+6. **Fees** — fee explorer (PDF-sourced) or “discuss on tour” fallback
+7. **Register** — multi-step enquiry form (UI only; Supabase later)
 
-## Deploy on Vercel
+## Content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Static JSON in `/content/`:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `centres.json` — 15 centres
+- `curriculum.json` — STEAM + Montessori
+- `schedules.json` — daily timeline
+- `fees.json` — per-centre fee tables from sales PDF
+- `programmes.json` — global programme info
+
+Replace `/public/images/centres/*.svg` with real centre photos when available.
+
+## PWA
+
+- Install via “Add to Home Screen” on tablet
+- Service worker precaches app shell in production (`/sw.js`)
+- Works offline after first load
+
+## Project structure
+
+```
+src/app/                  # Routes
+src/components/           # UI components by feature
+content/                  # Static content (Supabase-ready schema)
+public/                   # Images, icons, manifest
+```

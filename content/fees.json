@@ -1,0 +1,160 @@
+{
+  "centres": [
+    {
+      "slug": "bangsar",
+      "available": true,
+      "oneTimeFees": {
+        "registrationFee": 1000,
+        "annualResourceFee": 800,
+        "bookStationeryUnder3": 350,
+        "bookStationeryOver3": 650,
+        "insurance": 30
+      },
+      "tiers": [
+        { "ageGroup": "Infant Care (8 months – 1 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 pm", "termFee": 6450, "monthlyFee": 2150, "deposit": 2150 },
+        { "ageGroup": "Infant Care (8 months – 1 YO)", "programmeType": "Extended Day", "schoolHours": "9 am – 3 pm", "termFee": 7500, "monthlyFee": 2500, "deposit": 2500 },
+        { "ageGroup": "Infant Care (8 months – 1 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 8040, "monthlyFee": 2680, "deposit": 2680 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 / 12.30 pm", "termFee": 6150, "monthlyFee": 2050, "deposit": 2050 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Extended Day", "schoolHours": "9 am – 3 pm", "termFee": 7200, "monthlyFee": 2400, "deposit": 2400 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 7740, "monthlyFee": 2580, "deposit": 2580 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 1 pm", "termFee": 5550, "monthlyFee": 1850, "deposit": 1850 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Extended Day", "schoolHours": "9 am – 3 pm", "termFee": 6660, "monthlyFee": 2220, "deposit": 2220 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 6990, "monthlyFee": 2330, "deposit": 2330 }
+      ],
+      "notes": ["1 term = 3 months", "Other optional miscellaneous fees will be shared with parents in due course."]
+    },
+    {
+      "slug": "bruas",
+      "available": true,
+      "oneTimeFees": { "registrationFee": 1000, "annualResourceFee": 800, "bookStationeryUnder3": 350, "bookStationeryOver3": 650, "insurance": 30 },
+      "tiers": [
+        { "ageGroup": "Infant Care (3 months – 1 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 pm", "termFee": 6450, "monthlyFee": 2150, "deposit": 2150 },
+        { "ageGroup": "Infant Care (3 months – 1 YO)", "programmeType": "Extended Day", "schoolHours": "9 am – 3 pm", "termFee": 7500, "monthlyFee": 2500, "deposit": 2500 },
+        { "ageGroup": "Infant Care (3 months – 1 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 8040, "monthlyFee": 2680, "deposit": 2680 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 / 12.30 pm", "termFee": 6150, "monthlyFee": 2050, "deposit": 2050 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Extended Day", "schoolHours": "9 am – 3 pm", "termFee": 7200, "monthlyFee": 2400, "deposit": 2400 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 7740, "monthlyFee": 2580, "deposit": 2580 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 1 pm", "termFee": 5550, "monthlyFee": 1850, "deposit": 1850 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Extended Day", "schoolHours": "9 am – 3 pm", "termFee": 6660, "monthlyFee": 2220, "deposit": 2220 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 6990, "monthlyFee": 2330, "deposit": 2330 }
+      ],
+      "notes": ["1 term = 3 months"]
+    },
+    {
+      "slug": "bukit-jalil-city",
+      "available": true,
+      "oneTimeFees": { "registrationFee": 1000, "annualResourceFee": 800, "bookStationeryUnder3": 350, "bookStationeryOver3": 650, "insurance": 30 },
+      "tiers": [
+        { "ageGroup": "Infant Care (8 months – 1 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 pm", "termFee": 5250, "monthlyFee": 1750, "deposit": 1750 },
+        { "ageGroup": "Infant Care (8 months – 1 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 6150, "monthlyFee": 2050, "deposit": 2050 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 / 12.30 pm", "termFee": 4950, "monthlyFee": 1650, "deposit": 1650 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 5850, "monthlyFee": 1950, "deposit": 1950 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 1 pm", "termFee": 4950, "monthlyFee": 1650, "deposit": 1650 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 5850, "monthlyFee": 1950, "deposit": 1950 }
+      ],
+      "notes": ["1 term = 3 months"]
+    },
+    {
+      "slug": "ampang",
+      "available": true,
+      "oneTimeFees": { "registrationFee": 1000, "annualResourceFee": 800, "bookStationeryUnder3": 350, "bookStationeryOver3": 650, "insurance": 30 },
+      "tiers": [
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 / 12.30 pm", "termFee": 6150, "monthlyFee": 2050, "deposit": 2050 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Extended Day", "schoolHours": "9 am – 3 pm", "termFee": 7200, "monthlyFee": 2400, "deposit": 2400 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 7740, "monthlyFee": 2580, "deposit": 2580 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 1 pm", "termFee": 5550, "monthlyFee": 1850, "deposit": 1850 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Extended Day", "schoolHours": "9 am – 3 pm", "termFee": 6660, "monthlyFee": 2220, "deposit": 2220 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 6990, "monthlyFee": 2330, "deposit": 2330 }
+      ],
+      "notes": ["1 term = 3 months"]
+    },
+    {
+      "slug": "maisson-ara-damansara",
+      "available": true,
+      "oneTimeFees": { "registrationFee": 1000, "annualResourceFee": 800, "bookStationeryUnder3": 350, "bookStationeryOver3": 650, "insurance": 30 },
+      "tiers": [
+        { "ageGroup": "Infant Care (3 months – 1 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 pm", "termFee": 6450, "monthlyFee": 2150, "deposit": 2150 },
+        { "ageGroup": "Infant Care (3 months – 1 YO)", "programmeType": "Extended Day", "schoolHours": "9 am – 3 pm", "termFee": 7500, "monthlyFee": 2500, "deposit": 2500 },
+        { "ageGroup": "Infant Care (3 months – 1 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 8040, "monthlyFee": 2680, "deposit": 2680 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 / 12.30 pm", "termFee": 6150, "monthlyFee": 2050, "deposit": 2050 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Extended Day", "schoolHours": "9 am – 3 pm", "termFee": 7200, "monthlyFee": 2400, "deposit": 2400 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 7740, "monthlyFee": 2580, "deposit": 2580 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 1 pm", "termFee": 5550, "monthlyFee": 1850, "deposit": 1850 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Extended Day", "schoolHours": "9 am – 3 pm", "termFee": 6660, "monthlyFee": 2220, "deposit": 2220 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 6990, "monthlyFee": 2330, "deposit": 2330 }
+      ],
+      "notes": ["1 term = 3 months"]
+    },
+    {
+      "slug": "ttdi-2-junior",
+      "available": true,
+      "oneTimeFees": { "registrationFee": 1000, "annualResourceFee": 800, "bookStationeryUnder3": 350, "bookStationeryOver3": 650, "insurance": 30 },
+      "tiers": [
+        { "ageGroup": "Infant Care (8 months – 1 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 pm", "termFee": 6450, "monthlyFee": 2150, "deposit": 2150 },
+        { "ageGroup": "Infant Care (8 months – 1 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 8040, "monthlyFee": 2680, "deposit": 2680 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 / 12.30 pm", "termFee": 6150, "monthlyFee": 2050, "deposit": 2050 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 7740, "monthlyFee": 2580, "deposit": 2580 }
+      ],
+      "notes": ["1 term = 3 months"]
+    },
+    {
+      "slug": "cyberjaya",
+      "available": true,
+      "oneTimeFees": { "registrationFee": 1000, "annualResourceFee": 800, "bookStationeryUnder3": 350, "bookStationeryOver3": 650, "insurance": 30 },
+      "tiers": [
+        { "ageGroup": "Infant Care (8 months – 1 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 pm", "termFee": 6450, "monthlyFee": 2150, "deposit": 2150 },
+        { "ageGroup": "Infant Care (8 months – 1 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 8040, "monthlyFee": 2680, "deposit": 2680 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 / 12.30 pm", "termFee": 6150, "monthlyFee": 2050, "deposit": 2050 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 7740, "monthlyFee": 2580, "deposit": 2580 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 1 pm", "termFee": 5550, "monthlyFee": 1850, "deposit": 1850 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 6990, "monthlyFee": 2330, "deposit": 2330 }
+      ],
+      "notes": ["1 term = 3 months"]
+    },
+    {
+      "slug": "16-sierra",
+      "available": true,
+      "oneTimeFees": { "registrationFee": 1000, "annualResourceFee": 800, "bookStationeryUnder3": 350, "bookStationeryOver3": 650, "insurance": 30 },
+      "tiers": [
+        { "ageGroup": "Infant Care (8 months – 1 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 pm", "termFee": 5250, "monthlyFee": 1750, "deposit": 1750 },
+        { "ageGroup": "Infant Care (8 months – 1 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 6150, "monthlyFee": 2050, "deposit": 2050 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 / 12.30 pm", "termFee": 4950, "monthlyFee": 1650, "deposit": 1650 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 5850, "monthlyFee": 1950, "deposit": 1950 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 1 pm", "termFee": 4950, "monthlyFee": 1650, "deposit": 1650 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 5850, "monthlyFee": 1950, "deposit": 1950 }
+      ],
+      "notes": ["1 term = 3 months"]
+    },
+    {
+      "slug": "mont-kiara",
+      "available": true,
+      "oneTimeFees": { "registrationFee": 1000, "annualResourceFee": 800, "bookStationeryUnder3": 350, "bookStationeryOver3": 650, "insurance": 30 },
+      "tiers": [
+        { "ageGroup": "Infant Care (3 months – 1 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 pm", "termFee": 7950, "monthlyFee": 2650, "deposit": 7950 },
+        { "ageGroup": "Infant Care (3 months – 1 YO)", "programmeType": "Extended Day", "schoolHours": "9 am – 3 pm", "termFee": 8760, "monthlyFee": 2920, "deposit": 8760 },
+        { "ageGroup": "Infant Care (3 months – 1 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 9240, "monthlyFee": 3080, "deposit": 9240 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 / 12.30 pm", "termFee": 7650, "monthlyFee": 2550, "deposit": 7650 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Extended Day", "schoolHours": "9 am – 3 pm", "termFee": 8460, "monthlyFee": 2820, "deposit": 8460 },
+        { "ageGroup": "Montessori Playgroup (2 – 3 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 8940, "monthlyFee": 2980, "deposit": 8940 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 1 pm", "termFee": 6600, "monthlyFee": 2200, "deposit": 6600 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Extended Day", "schoolHours": "9 am – 3 pm", "termFee": 7800, "monthlyFee": 2600, "deposit": 7800 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 8250, "monthlyFee": 2750, "deposit": 8250 }
+      ],
+      "notes": ["1 term = 3 months", "One term refundable deposit applies at Mont Kiara"]
+    },
+    {
+      "slug": "u-thant",
+      "available": true,
+      "oneTimeFees": { "registrationFee": 1000, "annualResourceFee": 800, "bookStationeryUnder3": 350, "bookStationeryOver3": 650, "insurance": 30 },
+      "tiers": [
+        { "ageGroup": "Montessori Playgroup (18 months – 3 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 12 / 12.30 pm", "termFee": 6900, "monthlyFee": 2300, "deposit": 6900 },
+        { "ageGroup": "Montessori Playgroup (18 months – 3 YO)", "programmeType": "Extended Day", "schoolHours": "9 am – 3 pm", "termFee": 8100, "monthlyFee": 2700, "deposit": 8100 },
+        { "ageGroup": "Montessori Playgroup (18 months – 3 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 8550, "monthlyFee": 2850, "deposit": 8550 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Half Day", "schoolHours": "9 am – 1 pm", "termFee": 6600, "monthlyFee": 2200, "deposit": 6600 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Extended Day", "schoolHours": "9 am – 3 pm", "termFee": 7800, "monthlyFee": 2600, "deposit": 7800 },
+        { "ageGroup": "Montessori Junior (4 – 6 YO)", "programmeType": "Full Day", "schoolHours": "8 am – 6 pm", "termFee": 8250, "monthlyFee": 2750, "deposit": 8250 }
+      ],
+      "notes": ["1 term = 3 months"]
+    }
+  ]
+}

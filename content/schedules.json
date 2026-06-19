@@ -1,0 +1,76 @@
+{
+  "title": "A Day in The children's house",
+  "disclaimer": "The actual schedule may vary for different branches and is subject to change when there are special activities such as excursions, events, etc.",
+  "blocks": [
+    {
+      "id": "arrival",
+      "time": "8:00 AM",
+      "title": "Arrival & Free Play",
+      "description": "Children arrive and settle in with free choice activities in the prepared environment.",
+      "icon": "sunrise"
+    },
+    {
+      "id": "morning-circle",
+      "time": "9:00 AM",
+      "title": "Morning Circle",
+      "description": "Group gathering for songs, calendar, weather, and community building.",
+      "icon": "users"
+    },
+    {
+      "id": "montessori-work",
+      "time": "9:30 AM",
+      "title": "Montessori Work Cycle",
+      "description": "Uninterrupted work period with didactic materials across all five Montessori areas.",
+      "icon": "blocks"
+    },
+    {
+      "id": "snack",
+      "time": "10:30 AM",
+      "title": "Snack Time",
+      "description": "Healthy snack with practical life skills — setting table, serving, and cleaning up.",
+      "icon": "apple"
+    },
+    {
+      "id": "outdoor",
+      "time": "11:00 AM",
+      "title": "Outdoor Play",
+      "description": "Physical activity, nature exploration, and social play in outdoor spaces.",
+      "icon": "tree"
+    },
+    {
+      "id": "lunch",
+      "time": "12:00 PM",
+      "title": "Lunch",
+      "description": "Nutritious meal with grace and courtesy, fostering independence and table manners.",
+      "icon": "utensils"
+    },
+    {
+      "id": "nap",
+      "time": "1:00 PM",
+      "title": "Rest / Nap Time",
+      "description": "Quiet rest period for younger children; quiet activities for non-nappers.",
+      "icon": "moon"
+    },
+    {
+      "id": "afternoon-work",
+      "time": "2:30 PM",
+      "title": "Afternoon Activities",
+      "description": "STEAM projects, art, music, and group activities to extend learning.",
+      "icon": "palette"
+    },
+    {
+      "id": "tea",
+      "time": "3:30 PM",
+      "title": "Tea Time",
+      "description": "Afternoon snack and preparation for departure.",
+      "icon": "coffee"
+    },
+    {
+      "id": "dismissal",
+      "time": "4:00 PM",
+      "title": "Dismissal",
+      "description": "End of half-day programme. Full-day children continue with enrichment until 6:00 PM.",
+      "icon": "home"
+    }
+  ]
+}

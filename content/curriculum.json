@@ -1,0 +1,67 @@
+{
+  "intro": "The intersection between Science and Art — STEAM integrated within our complete Montessori Method, developed with experts in Singapore and the UK to build future-ready skills.",
+  "steamPillars": [
+    {
+      "id": "science",
+      "title": "Science — Inquiry and Exploration",
+      "shortTitle": "Science",
+      "description": "Children are natural scientists. Through sensory exploration and practical life activities, they observe, question, and discover the world around them.",
+      "icon": "flask"
+    },
+    {
+      "id": "technology",
+      "title": "Technology — Creativity and Innovation",
+      "shortTitle": "Technology",
+      "description": "Modern tools are woven into purposeful Montessori activities, encouraging creative problem-solving and digital literacy from an early age.",
+      "icon": "cpu"
+    },
+    {
+      "id": "engineering",
+      "title": "Engineering — Building and Problem-solving",
+      "shortTitle": "Engineering",
+      "description": "Constructive play with blocks, gears, and design challenges helps children build, test, and refine their solutions.",
+      "icon": "blocks"
+    },
+    {
+      "id": "arts",
+      "title": "Arts — Expression and Design",
+      "shortTitle": "Arts",
+      "description": "Creative freedom combined with design thinking allows children to express themselves through art, music, and imaginative play.",
+      "icon": "palette"
+    },
+    {
+      "id": "mathematics",
+      "title": "Mathematics — Logic and Precision",
+      "shortTitle": "Mathematics",
+      "description": "Concrete Montessori math materials guide children from counting to abstract concepts like division, multiplication, and decimals.",
+      "icon": "calculator"
+    }
+  ],
+  "montessoriAreas": [
+    {
+      "id": "practical-life",
+      "title": "Practical Life",
+      "description": "Everyday activities using tongs, pegs, and jugs promote gross and fine motor skills, concentration, and independence."
+    },
+    {
+      "id": "sensorial",
+      "title": "Sensorial",
+      "description": "Materials refine the five senses through texture, sound, taste, smell, size, and colour discrimination."
+    },
+    {
+      "id": "language",
+      "title": "Language",
+      "description": "A print-rich environment encourages alphabet recognition, phonetic reading, grammar, and writing activities."
+    },
+    {
+      "id": "number-work",
+      "title": "Number Work",
+      "description": "A systematic approach from concrete counting to abstract numeracy concepts builds a solid mathematical foundation."
+    },
+    {
+      "id": "culture",
+      "title": "Culture",
+      "description": "Art, music, biology, botany, zoology, history, and geography foster global awareness and appreciation."
+    }
+  ]
+}
