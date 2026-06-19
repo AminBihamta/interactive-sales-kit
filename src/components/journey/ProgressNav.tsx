@@ -11,8 +11,8 @@ import {
   Check,
   ChevronRight,
   ClipboardPen,
-  DollarSign,
   Home,
+  Receipt,
   type LucideIcon,
 } from "lucide-react";
 import { BrandLogo } from "@/components/layout/BrandLogo";
@@ -36,7 +36,7 @@ const STEP_ICONS: Record<JourneyStepId, LucideIcon> = {
   curriculum: BookOpen,
   programmes: Baby,
   schedule: Calendar,
-  fees: DollarSign,
+  fees: Receipt,
   register: ClipboardPen,
 };
 

@@ -19,7 +19,7 @@ export default async function RegisterPage({ params }: PageProps) {
     <div>
       <CentreHeader centre={centre} />
       <div className="mb-8 text-center">
-        <h2 className="text-2xl font-bold">Book a School Tour</h2>
+        <h2 className="text-2xl font-bold">Confirm your interest</h2>
         <p className="mt-2 text-muted-foreground">
           We are looking forward to many Best Beginnings with your child!
         </p>

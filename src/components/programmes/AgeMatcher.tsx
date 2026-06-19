@@ -41,7 +41,7 @@ export function AgeMatcher({ centre, programmes }: AgeMatcherProps) {
   const programmeList = [programmes.playgroup, programmes.junior];
 
   return (
-    <div className="grid min-h-[min(68vh,640px)] gap-6 lg:grid-cols-[minmax(280px,38%)_1fr] lg:gap-8">
+    <div className="grid items-start gap-6 lg:grid-cols-[minmax(280px,38%)_1fr] lg:gap-8">
       <BirthDateCalendar
         value={birthDate}
         onChange={setBirthDate}
@@ -51,7 +51,7 @@ export function AgeMatcher({ centre, programmes }: AgeMatcherProps) {
       />
 
       <div className="flex min-h-0 flex-col gap-4">
-        <div className="flex min-h-0 flex-1 flex-col gap-4">
+        <div className="flex flex-col gap-4">
           {programmeList.map((programme) => {
             const isPlaygroup = programme.id === "playgroup";
             const available = isPlaygroup
@@ -66,42 +66,59 @@ export function AgeMatcher({ centre, programmes }: AgeMatcherProps) {
                 layout
                 transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
                 className={cn(
-                  "flex min-h-0 flex-1 flex-col rounded-2xl p-6 transition-colors lg:rounded-3xl",
+                  "flex flex-col rounded-2xl px-6 py-6 transition-colors lg:rounded-3xl",
                   isHighlighted
                     ? "bg-brand-primary text-white shadow-lg shadow-brand-primary/25"
                     : "border border-border bg-white",
                   !available && "opacity-50",
                 )}
               >
-                <div className="flex items-center gap-3">
-                  <Icon
-                    className={cn(
-                      "size-8 shrink-0",
-                      isHighlighted
-                        ? "text-white"
-                        : isPlaygroup
-                          ? "text-brand-primary"
-                          : "text-brand-secondary",
-                    )}
-                  />
-                  <div>
-                    <h4
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex min-w-0 items-center gap-3">
+                    <Icon
                       className={cn(
-                        "text-xl font-bold",
-                        isHighlighted ? "text-white" : "text-foreground",
+                        "size-8 shrink-0",
+                        isHighlighted
+                          ? "text-white"
+                          : isPlaygroup
+                            ? "text-brand-primary"
+                            : "text-brand-secondary",
                       )}
-                    >
-                      {programme.title}
-                    </h4>
-                    <p
-                      className={cn(
-                        "text-sm",
-                        isHighlighted ? "text-white/75" : "text-muted-foreground",
-                      )}
-                    >
-                      {programme.subtitle}
-                    </p>
+                    />
+                    <div>
+                      <h4
+                        className={cn(
+                          "text-xl font-bold",
+                          isHighlighted ? "text-white" : "text-foreground",
+                        )}
+                      >
+                        {programme.title}
+                      </h4>
+                      <p
+                        className={cn(
+                          "text-sm",
+                          isHighlighted ? "text-white/75" : "text-muted-foreground",
+                        )}
+                      >
+                        {programme.subtitle}
+                      </p>
+                    </div>
                   </div>
+
+                  {available && (
+                    <Badge
+                      className={cn(
+                        "shrink-0",
+                        isHighlighted
+                          ? "border-transparent bg-white/20 text-white hover:bg-white/20"
+                          : "bg-brand-primary text-white",
+                      )}
+                    >
+                      {isPlaygroup
+                        ? centre.programmes.playgroup.ageRange
+                        : centre.programmes.junior.ageRange}
+                    </Badge>
+                  )}
                 </div>
 
                 {!available ? (
@@ -126,18 +143,6 @@ export function AgeMatcher({ centre, programmes }: AgeMatcherProps) {
                         ? centre.programmes.playgroup.description
                         : centre.programmes.junior.description}
                     </p>
-                    <Badge
-                      className={cn(
-                        "mt-3 w-fit",
-                        isHighlighted
-                          ? "border-transparent bg-white/20 text-white hover:bg-white/20"
-                          : "bg-brand-primary text-white",
-                      )}
-                    >
-                      {isPlaygroup
-                        ? centre.programmes.playgroup.ageRange
-                        : centre.programmes.junior.ageRange}
-                    </Badge>
                     <ul className="mt-4 space-y-1.5">
                       {programme.highlights.map((highlight) => (
                         <li

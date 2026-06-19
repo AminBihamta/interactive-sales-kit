@@ -15,6 +15,12 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import type { Centre, EnquiryFormData } from "@/lib/types";
+import {
+  getEmailError,
+  getMobileNumberError,
+  isValidEmail,
+  isValidMalaysianPhone,
+} from "@/lib/validation";
 
 interface EnquiryFormProps {
   centre: Centre;
@@ -66,13 +72,40 @@ export function EnquiryForm({ centre }: EnquiryFormProps) {
     setErrors((prev) => ({ ...prev, [field]: undefined }));
   };
 
+  const validateField = (
+    field: keyof EnquiryFormData,
+    value: string | boolean,
+  ): string | undefined => {
+    if (field === "parentName" && typeof value === "string") {
+      return value.trim() ? undefined : "Required";
+    }
+    if (field === "mobileNumber" && typeof value === "string") {
+      return getMobileNumberError(value);
+    }
+    if (field === "email" && typeof value === "string") {
+      return getEmailError(value);
+    }
+    return undefined;
+  };
+
+  const handleBlur = (field: keyof EnquiryFormData) => {
+    const error = validateField(field, form[field]);
+    setErrors((prev) => ({ ...prev, [field]: error }));
+  };
+
+  const hasStep0InvalidInput =
+    (!!form.mobileNumber.trim() && !isValidMalaysianPhone(form.mobileNumber)) ||
+    (!!form.email.trim() && !isValidEmail(form.email));
+
   const validateStep = (s: number): boolean => {
     const newErrors: typeof errors = {};
     if (s === 0) {
-      if (!form.parentName.trim()) newErrors.parentName = "Required";
-      if (!form.mobileNumber.trim()) newErrors.mobileNumber = "Required";
-      if (!form.email.trim() || !form.email.includes("@"))
-        newErrors.email = "Valid email required";
+      const parentNameError = validateField("parentName", form.parentName);
+      const mobileError = validateField("mobileNumber", form.mobileNumber);
+      const emailError = validateField("email", form.email);
+      if (parentNameError) newErrors.parentName = parentNameError;
+      if (mobileError) newErrors.mobileNumber = mobileError;
+      if (emailError) newErrors.email = emailError;
     }
     if (s === 1) {
       if (!form.childName.trim()) newErrors.childName = "Required";
@@ -151,8 +184,11 @@ export function EnquiryForm({ centre }: EnquiryFormProps) {
               <Label htmlFor="parentName">Parent&apos;s name</Label>
               <Input
                 id="parentName"
+                placeholder="e.g. Sarah Lim"
                 value={form.parentName}
                 onChange={(e) => update("parentName", e.target.value)}
+                onBlur={() => handleBlur("parentName")}
+                aria-invalid={!!errors.parentName}
                 className="min-h-12"
               />
               {errors.parentName && (
@@ -164,8 +200,13 @@ export function EnquiryForm({ centre }: EnquiryFormProps) {
               <Input
                 id="mobile"
                 type="tel"
+                inputMode="tel"
+                autoComplete="tel"
+                placeholder="e.g. 012-345 6789"
                 value={form.mobileNumber}
                 onChange={(e) => update("mobileNumber", e.target.value)}
+                onBlur={() => handleBlur("mobileNumber")}
+                aria-invalid={!!errors.mobileNumber}
                 className="min-h-12"
               />
               {errors.mobileNumber && (
@@ -177,15 +218,23 @@ export function EnquiryForm({ centre }: EnquiryFormProps) {
               <Input
                 id="email"
                 type="email"
+                autoComplete="email"
+                placeholder="e.g. name@example.com"
                 value={form.email}
                 onChange={(e) => update("email", e.target.value)}
+                onBlur={() => handleBlur("email")}
+                aria-invalid={!!errors.email}
                 className="min-h-12"
               />
               {errors.email && (
                 <p className="text-sm text-destructive">{errors.email}</p>
               )}
             </div>
-            <Button onClick={handleNext} className="min-h-12 w-full">
+            <Button
+              onClick={handleNext}
+              disabled={hasStep0InvalidInput}
+              className="min-h-12 w-full"
+            >
               Continue
               <ChevronRight className="size-4" />
             </Button>
@@ -224,28 +273,28 @@ export function EnquiryForm({ centre }: EnquiryFormProps) {
                 <p className="text-sm text-destructive">{errors.childDob}</p>
               )}
             </div>
-            <div className="space-y-2">
-              <Label>Interested programme</Label>
-              <Select
-                value={form.programme}
-                onValueChange={(v) => v && update("programme", v)}
-              >
-                <SelectTrigger className="min-h-12">
-                  <SelectValue placeholder="Select programme" />
-                </SelectTrigger>
-                <SelectContent>
-                  {programmeOptions.map((opt) => (
-                    <SelectItem key={opt.value} value={opt.value}>
-                      {opt.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              {errors.programme && (
-                <p className="text-sm text-destructive">{errors.programme}</p>
-              )}
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-3">
+              <div className="space-y-2">
+                <Label>Interested programme</Label>
+                <Select
+                  value={form.programme}
+                  onValueChange={(v) => v && update("programme", v)}
+                >
+                  <SelectTrigger className="min-h-12">
+                    <SelectValue placeholder="Select programme" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {programmeOptions.map((opt) => (
+                      <SelectItem key={opt.value} value={opt.value}>
+                        {opt.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                {errors.programme && (
+                  <p className="text-sm text-destructive">{errors.programme}</p>
+                )}
+              </div>
               <div className="space-y-2">
                 <Label>Preferred visit day</Label>
                 <Select
@@ -267,6 +316,9 @@ export function EnquiryForm({ centre }: EnquiryFormProps) {
                     ))}
                   </SelectContent>
                 </Select>
+                {errors.visitDay && (
+                  <p className="text-sm text-destructive">{errors.visitDay}</p>
+                )}
               </div>
               <div className="space-y-2">
                 <Label>Preferred visit time</Label>
@@ -286,6 +338,9 @@ export function EnquiryForm({ centre }: EnquiryFormProps) {
                     ))}
                   </SelectContent>
                 </Select>
+                {errors.visitTime && (
+                  <p className="text-sm text-destructive">{errors.visitTime}</p>
+                )}
               </div>
             </div>
             <div className="flex items-start gap-3 rounded-xl bg-surface p-4">
@@ -298,7 +353,7 @@ export function EnquiryForm({ centre }: EnquiryFormProps) {
               />
               <Label htmlFor="consent" className="text-sm leading-relaxed">
                 I agree to be contacted by Busy Bees Asia and its partners
-                regarding enrolment at The Children&apos;s House.
+                regarding enrolment at The Children&apos;s House Montessori.
               </Label>
             </div>
             {errors.marketingConsent && (

@@ -10,7 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { CalendarHeart, Info } from "lucide-react";
+import { CalendarHeart, Clock } from "lucide-react";
 import type { Centre, CentreFees } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -18,6 +18,11 @@ interface FeeExplorerProps {
   centre: Centre;
   fees: CentreFees | undefined;
 }
+
+const feeSelectTriggerClass =
+  "!w-full !h-auto min-h-12 px-4 py-3 data-[size=default]:!h-auto";
+const feeSelectContentClass = "p-1.5";
+const feeSelectItemClass = "min-h-11 py-2.5 pl-3 pr-8";
 
 function AnimatedPrice({ value }: { value: number }) {
   return (
@@ -75,129 +80,157 @@ export function FeeExplorer({ centre, fees }: FeeExplorerProps) {
 
   return (
     <div className="space-y-8">
-      <div className="grid gap-4 md:grid-cols-2">
-        <div>
-          <label className="mb-2 block text-sm font-medium">Age group</label>
-          <Select
-            value={ageGroup}
-            onValueChange={(v) => v && setAgeGroup(v)}
-          >
-            <SelectTrigger className="min-h-12">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              {ageGroups.map((group) => (
-                <SelectItem key={group} value={group}>
-                  {group}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
+      <div className="grid items-start gap-6 lg:grid-cols-[minmax(200px,1fr)_minmax(0,3fr)] lg:items-stretch">
+        <div className="grid w-full grid-cols-1 gap-4">
+          <div className="w-full">
+            <label className="mb-2.5 block text-sm font-medium">Age group</label>
+            <Select value={ageGroup} onValueChange={(v) => v && setAgeGroup(v)}>
+              <SelectTrigger className={feeSelectTriggerClass}>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent className={feeSelectContentClass}>
+                {ageGroups.map((group) => (
+                  <SelectItem
+                    key={group}
+                    value={group}
+                    className={feeSelectItemClass}
+                  >
+                    {group}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="w-full">
+            <label className="mb-2.5 block text-sm font-medium">
+              Programme type
+            </label>
+            <Select
+              value={programmeType}
+              onValueChange={(v) =>
+                v &&
+                setProgrammeType(v as "Half Day" | "Extended Day" | "Full Day")
+              }
+            >
+              <SelectTrigger className={feeSelectTriggerClass}>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent className={feeSelectContentClass}>
+                {programmeTypes.map((type) => (
+                  <SelectItem
+                    key={type}
+                    value={type}
+                    className={feeSelectItemClass}
+                  >
+                    {type}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
         </div>
-        <div>
-          <label className="mb-2 block text-sm font-medium">Programme type</label>
-          <Select
-            value={programmeType}
-            onValueChange={(v) =>
-              v && setProgrammeType(v as "Half Day" | "Extended Day" | "Full Day")
-            }
-          >
-            <SelectTrigger className="min-h-12">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              {programmeTypes.map((type) => (
-                <SelectItem key={type} value={type}>
-                  {type}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-      </div>
 
-      {selectedTier && (
         <motion.div
           key={`${ageGroup}-${programmeType}`}
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          className="rounded-2xl bg-surface p-8"
+          className="rounded-2xl bg-surface p-8 lg:h-full"
         >
-          <p className="text-sm text-muted-foreground">{selectedTier.schoolHours}</p>
-          <div className="mt-4 flex flex-wrap items-end gap-6">
-            <div>
-              <p className="text-sm text-muted-foreground">Monthly</p>
-              <AnimatedPrice value={selectedTier.monthlyFee} />
-            </div>
-            <div>
-              <p className="text-sm text-muted-foreground">Per term (3 months)</p>
-              <p className="text-2xl font-bold">
-                RM {selectedTier.termFee.toLocaleString()}
+          {selectedTier && (
+            <>
+              <p className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Clock className="size-4 shrink-0 text-brand-secondary" aria-hidden />
+                {selectedTier.schoolHours}
               </p>
-            </div>
-            <div>
-              <p className="text-sm text-muted-foreground">Deposit</p>
-              <p className="text-2xl font-bold">
-                RM {selectedTier.deposit.toLocaleString()}
-              </p>
-            </div>
-          </div>
+              <div className="mt-4 flex flex-wrap items-end gap-6">
+                <div>
+                  <p className="text-sm text-muted-foreground">Monthly</p>
+                  <AnimatedPrice value={selectedTier.monthlyFee} />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">
+                    Per term (3 months)
+                  </p>
+                  <p className="text-2xl font-bold">
+                    RM {selectedTier.termFee.toLocaleString()}
+                  </p>
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Deposit</p>
+                  <p className="text-2xl font-bold">
+                    RM {selectedTier.deposit.toLocaleString()}
+                  </p>
+                </div>
+              </div>
+            </>
+          )}
         </motion.div>
-      )}
+      </div>
 
       <div className="rounded-xl border">
         <button
           type="button"
+          aria-expanded={showOneTime}
+          aria-controls="one-time-fees-panel"
           onClick={() => setShowOneTime(!showOneTime)}
           className="flex w-full items-center justify-between px-4 py-4 text-base font-semibold"
         >
           One-time fees upon registration
           <ChevronDown
             className={cn(
-              "size-5 transition-transform",
+              "size-5 transition-transform duration-300 ease-out",
               showOneTime && "rotate-180",
             )}
           />
         </button>
-        {showOneTime && (
-          <dl className="space-y-2 border-t px-4 py-4 text-sm">
-            <div className="flex justify-between">
-              <dt>Registration fee</dt>
-              <dd className="font-semibold">
-                RM {fees.oneTimeFees.registrationFee.toLocaleString()}
-              </dd>
-            </div>
-            <div className="flex justify-between">
-              <dt>Annual resource fee</dt>
-              <dd className="font-semibold">
-                RM {fees.oneTimeFees.annualResourceFee.toLocaleString()}
-              </dd>
-            </div>
-            <div className="flex justify-between">
-              <dt>Books & stationery (18m – 3y)</dt>
-              <dd className="font-semibold">
-                RM {fees.oneTimeFees.bookStationeryUnder3.toLocaleString()}
-              </dd>
-            </div>
-            <div className="flex justify-between">
-              <dt>Books & stationery (4 – 6y)</dt>
-              <dd className="font-semibold">
-                RM {fees.oneTimeFees.bookStationeryOver3.toLocaleString()}
-              </dd>
-            </div>
-            <div className="flex justify-between">
-              <dt>Insurance (one-time)</dt>
-              <dd className="font-semibold">
-                RM {fees.oneTimeFees.insurance.toLocaleString()}
-              </dd>
-            </div>
-          </dl>
-        )}
-      </div>
-
-      <div className="flex items-start gap-2 rounded-xl bg-brand-primary/5 px-4 py-3 text-sm text-muted-foreground">
-        <Info className="mt-0.5 size-4 shrink-0 text-brand-primary" />
-        <p>{fees.notes.join(" ")}</p>
+        <div
+          id="one-time-fees-panel"
+          aria-hidden={!showOneTime}
+          className={cn(
+            "grid transition-[grid-template-rows] duration-300 ease-out",
+            showOneTime ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+          )}
+        >
+          <div className="overflow-hidden">
+            <dl
+              className={cn(
+                "space-y-2 border-t px-4 py-4 text-sm transition-opacity duration-300 ease-out",
+                showOneTime ? "opacity-100" : "opacity-0",
+              )}
+            >
+              <div className="flex justify-between">
+                <dt>Registration fee</dt>
+                <dd className="font-semibold">
+                  RM {fees.oneTimeFees.registrationFee.toLocaleString()}
+                </dd>
+              </div>
+              <div className="flex justify-between">
+                <dt>Annual resource fee</dt>
+                <dd className="font-semibold">
+                  RM {fees.oneTimeFees.annualResourceFee.toLocaleString()}
+                </dd>
+              </div>
+              <div className="flex justify-between">
+                <dt>Books & stationery (18m – 3y)</dt>
+                <dd className="font-semibold">
+                  RM {fees.oneTimeFees.bookStationeryUnder3.toLocaleString()}
+                </dd>
+              </div>
+              <div className="flex justify-between">
+                <dt>Books & stationery (4 – 6y)</dt>
+                <dd className="font-semibold">
+                  RM {fees.oneTimeFees.bookStationeryOver3.toLocaleString()}
+                </dd>
+              </div>
+              <div className="flex justify-between">
+                <dt>Insurance (one-time)</dt>
+                <dd className="font-semibold">
+                  RM {fees.oneTimeFees.insurance.toLocaleString()}
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
       </div>
     </div>
   );
