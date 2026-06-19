@@ -14,6 +14,7 @@ import {
   Home,
   type LucideIcon,
 } from "lucide-react";
+import { BrandLogo } from "@/components/layout/BrandLogo";
 import {
   JOURNEY_STEPS,
   getJourneyHref,
@@ -45,8 +46,17 @@ export function ProgressNav({ slug }: ProgressNavProps) {
   const { start } = useJourneyTransition();
 
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-brand-primary px-4 py-3 shadow-[0_-4px_24px_rgba(0,0,0,0.15)]">
-      <div className="mx-auto flex max-w-6xl items-center justify-center gap-1 overflow-x-auto pb-safe">
+    <nav className="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-brand-primary px-4 py-2 shadow-[0_-4px_24px_rgba(0,0,0,0.15)]">
+      <div className="mx-auto flex max-w-6xl items-center gap-3 pb-safe lg:gap-4">
+        <Link
+          href="/"
+          className="shrink-0 rounded-lg transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+          aria-label="All centres"
+        >
+          <BrandLogo variant="white" className="h-8 w-auto md:h-9" />
+        </Link>
+
+        <div className="flex min-w-0 flex-1 items-center justify-center gap-1 overflow-x-auto">
         {JOURNEY_STEPS.map((step, index) => {
           const isActive = step.id === currentStepId;
           const isCompleted = index < currentIndex;
@@ -71,7 +81,7 @@ export function ProgressNav({ slug }: ProgressNavProps) {
                   layout
                   transition={springTransition}
                   className={cn(
-                    "flex min-h-12 min-w-[5.5rem] items-center justify-center gap-1.5 rounded-full px-4 py-2.5 text-sm font-semibold transition-colors",
+                    "flex min-h-10 min-w-[5.5rem] items-center justify-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-semibold transition-colors",
                     isActive &&
                       "bg-brand-secondary text-white shadow-lg shadow-brand-secondary/30",
                     isCompleted && !isActive && "bg-surface text-foreground",
@@ -100,6 +110,7 @@ export function ProgressNav({ slug }: ProgressNavProps) {
             </div>
           );
         })}
+        </div>
       </div>
     </nav>
   );

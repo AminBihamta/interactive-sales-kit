@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Baby, GraduationCap } from "lucide-react";
 import type { Centre } from "@/lib/types";
 import { cn } from "@/lib/utils";
@@ -36,12 +35,11 @@ export function CentreProgrammeChips({
       {available.map(({ key, label, icon: Icon }) => {
         const programme = centre.programmes[key];
         return (
-          <Link
+          <div
             key={key}
-            href={`/centres/${centre.slug}/programmes`}
-            className="group flex min-w-0 flex-1 basis-[calc(50%-0.25rem)] items-center gap-2 rounded-xl border border-brand-secondary/15 bg-surface px-3 py-2.5 transition-colors hover:border-brand-secondary/40 hover:bg-white"
+            className="flex min-w-0 flex-1 basis-[calc(50%-0.25rem)] items-center gap-2 rounded-xl border border-brand-secondary/15 bg-surface px-3 py-2.5"
           >
-            <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-brand-secondary/10 text-brand-secondary transition-colors group-hover:bg-brand-secondary group-hover:text-white">
+            <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-brand-secondary/10 text-brand-secondary">
               <Icon className="size-4" />
             </span>
             <span className="min-w-0">
@@ -52,7 +50,7 @@ export function CentreProgrammeChips({
                 {programme.ageRange}
               </span>
             </span>
-          </Link>
+          </div>
         );
       })}
     </div>

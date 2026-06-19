@@ -101,6 +101,17 @@ export function CentreCarousel({ centres, filterKey }: CentreCarouselProps) {
     emblaApi.scrollNext();
   }, [emblaApi]);
 
+  const scrollToIndex = useCallback(
+    (index: number) => {
+      if (!emblaApi || index === selectedIndex) return;
+      lastSnapRef.current = null;
+      emblaApi.scrollTo(index, true);
+      // Instant scroll does not emit "settle", so update highlight here.
+      commitSelectedIndex(emblaApi);
+    },
+    [emblaApi, selectedIndex, commitSelectedIndex],
+  );
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!emblaApi) return;
@@ -168,6 +179,7 @@ export function CentreCarousel({ centres, filterKey }: CentreCarouselProps) {
                   centre={centre}
                   isActive={selectedIndex === index}
                   index={index}
+                  onSelect={scrollToIndex}
                 />
               </div>
             </motion.div>

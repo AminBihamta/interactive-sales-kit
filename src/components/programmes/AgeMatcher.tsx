@@ -51,21 +51,6 @@ export function AgeMatcher({ centre, programmes }: AgeMatcherProps) {
       />
 
       <div className="flex min-h-0 flex-col gap-4">
-        <div>
-          <h3 className="text-lg font-semibold text-foreground">
-            Programmes at {centre.name}
-          </h3>
-          <p className="mt-1 text-sm text-muted-foreground">
-            {match
-              ? `Based on your child's age, we recommend ${
-                  match === "playgroup"
-                    ? programmes.playgroup.title
-                    : programmes.junior.title
-                }.`
-              : `Contact us to discuss options for a ${formatAge(ageMonths)} old at ${centre.name}.`}
-          </p>
-        </div>
-
         <div className="flex min-h-0 flex-1 flex-col gap-4">
           {programmeList.map((programme) => {
             const isPlaygroup = programme.id === "playgroup";

@@ -172,7 +172,7 @@ export function BirthDateCalendar({
       </div>
 
       {pickerOpen ? (
-        <div className="mt-4 grid flex-1 grid-cols-3 gap-2 content-start">
+        <div className="mt-4 grid grid-cols-3 gap-2 content-start">
           {MONTH_LABELS.map((label, month) => {
             const enabled = isMonthInRange(pickerYear, month, minDate, maxDate);
             const isViewing =
@@ -209,7 +209,7 @@ export function BirthDateCalendar({
             ))}
           </div>
 
-          <div className="mt-1 grid flex-1 grid-cols-7 gap-1 content-start">
+          <div className="mt-1 grid grid-cols-7 gap-1">
             {days.map((day, index) => {
               if (!day) {
                 return <span key={`empty-${index}`} aria-hidden="true" />;

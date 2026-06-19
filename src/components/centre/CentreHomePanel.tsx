@@ -4,7 +4,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { BrandLogo } from "@/components/layout/BrandLogo";
 import { centreCtaReveal, centrePanelSlide } from "@/lib/animations";
 import { useJourneyTransition } from "@/components/journey/JourneyTransition";
 import type { Centre } from "@/lib/types";
@@ -27,13 +26,7 @@ export function CentreHomePanel({ centre, ready = true }: CentreHomePanelProps) 
       className="flex h-full min-h-0 flex-col overflow-hidden rounded-2xl bg-white shadow-2xl shadow-black/10 lg:rounded-3xl"
     >
       <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-5 py-5 lg:px-7 lg:py-7">
-        <BrandLogo variant="red" className="mb-4" />
-
-        <p className="text-xs font-semibold uppercase tracking-wider text-brand-secondary">
-          {centre.heroTagline}
-        </p>
-
-        <h1 className="mt-2 text-3xl font-bold tracking-tight text-brand-primary lg:text-4xl">
+        <h1 className="text-3xl font-bold tracking-tight text-brand-primary lg:text-4xl">
           {centre.name}
         </h1>
 

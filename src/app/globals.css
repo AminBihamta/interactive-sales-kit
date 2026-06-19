@@ -86,7 +86,7 @@
   --sidebar-accent-foreground: #000000;
   --sidebar-border: #e2e8e4;
   --sidebar-ring: #4e738a;
-  --journey-nav-height: 5.5rem;
+  --journey-nav-height: 5rem;
 }
 
 @layer base {

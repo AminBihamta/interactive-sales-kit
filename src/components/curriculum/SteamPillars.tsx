@@ -31,7 +31,7 @@ export function SteamPillars({ curriculum }: SteamPillarsProps) {
 
   return (
     <div className="space-y-6">
-      <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">
+      <p className="text-base leading-relaxed text-muted-foreground">
         {curriculum.intro}
       </p>
 

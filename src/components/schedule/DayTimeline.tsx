@@ -48,7 +48,7 @@ export function DayTimeline({ schedule }: DayTimelineProps) {
       </p>
 
       <div className="flex flex-col gap-6 lg:flex-row">
-        <div className="flex-1 space-y-2">
+        <div className="flex-1 max-h-[calc(6*3rem+5*0.5rem)] space-y-2 overflow-y-auto overscroll-contain pr-1">
           {schedule.blocks.map((block, index) => {
             const BlockIcon = ICON_MAP[block.icon] ?? Blocks;
             const isActive = index === activeIndex;
@@ -57,7 +57,7 @@ export function DayTimeline({ schedule }: DayTimelineProps) {
                 key={block.id}
                 type="button"
                 onClick={() => setActiveIndex(index)}
-                className={`flex w-full items-center gap-4 rounded-xl px-4 py-3 text-left transition-all ${
+                className={`flex min-h-12 w-full items-center gap-4 rounded-xl px-4 py-3 text-left transition-all ${
                   isActive
                     ? "bg-brand-secondary text-white shadow-md"
                     : "bg-surface hover:bg-surface/80"

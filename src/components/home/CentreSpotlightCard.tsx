@@ -11,12 +11,14 @@ interface CentreSpotlightCardProps {
   centre: Centre;
   isActive: boolean;
   index: number;
+  onSelect?: (index: number) => void;
 }
 
 export function CentreSpotlightCard({
   centre,
   isActive,
   index,
+  onSelect,
 }: CentreSpotlightCardProps) {
   const reducedMotion = useReducedMotion();
 
@@ -33,11 +35,18 @@ export function CentreSpotlightCard({
     >
       <Link
         href={`/centres/${centre.slug}`}
+        onClick={(e) => {
+          if (!isActive) {
+            e.preventDefault();
+            onSelect?.(index);
+          }
+        }}
         className={cn(
           "group relative flex h-full w-full flex-col overflow-hidden rounded-2xl bg-black shadow-xl",
-          !isActive && "pointer-events-none",
+          !isActive && "cursor-pointer",
         )}
         tabIndex={isActive ? 0 : -1}
+        aria-label={!isActive ? `Select ${centre.name}` : undefined}
       >
         <div className="relative min-h-0 flex-1 overflow-hidden">
           <motion.div
