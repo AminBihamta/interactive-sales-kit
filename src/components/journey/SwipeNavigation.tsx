@@ -23,8 +23,8 @@ interface SwipePreview {
   progress: number;
 }
 
-const SWIPE_THRESHOLD = 80;
-const PREVIEW_START = 20;
+const SWIPE_THRESHOLD = 160;
+const PREVIEW_START = 40;
 
 function findHorizontalScrollParent(element: EventTarget | null): HTMLElement | null {
   let el =

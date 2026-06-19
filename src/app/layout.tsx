@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { DM_Sans } from "next/font/google";
 import { AppProviders } from "@/components/layout/AppProviders";
 import { PortraitOverlay } from "@/components/layout/PortraitOverlay";
+import { PwaGate } from "@/components/layout/PwaGate";
 import { ServiceWorkerRegistration } from "@/components/layout/ServiceWorkerRegistration";
 import "./globals.css";
 
@@ -41,8 +42,10 @@ export default function RootLayout({
     <html lang="en" className={`${dmSans.variable} h-full`}>
       <body className="min-h-dvh font-sans antialiased">
         <ServiceWorkerRegistration />
-        <PortraitOverlay />
-        <AppProviders>{children}</AppProviders>
+        <PwaGate>
+          <PortraitOverlay />
+          <AppProviders>{children}</AppProviders>
+        </PwaGate>
       </body>
     </html>
   );
