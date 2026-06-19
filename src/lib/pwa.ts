@@ -16,7 +16,14 @@ export function isPwaGateEnabled(): boolean {
   return process.env.NODE_ENV === "production";
 }
 
-export function isMobileOrTabletDevice(): boolean {
+function isDesktopOperatingSystem(): boolean {
+  if (typeof window === "undefined") return false;
+
+  const ua = window.navigator.userAgent;
+  return /Windows NT|Macintosh|CrOS/i.test(ua) && !/Android/i.test(ua);
+}
+
+function hasMobileUserAgentHint(): boolean {
   if (typeof window === "undefined") return false;
 
   const ua = window.navigator.userAgent;
@@ -29,8 +36,33 @@ export function isMobileOrTabletDevice(): boolean {
   const isOtherMobile =
     /webOS|BlackBerry|IEMobile|Opera Mini/i.test(ua);
 
-  // UA first — Chrome on Android tablets often reports fine pointer + hover.
   if (isAndroid || isIosPhone || isIpad || isOtherMobile) return true;
+
+  const uaData = (
+    window.navigator as Navigator & { userAgentData?: { mobile?: boolean } }
+  ).userAgentData;
+
+  return uaData?.mobile === true;
+}
+
+function isTouchTabletFormFactor(): boolean {
+  if (typeof window === "undefined") return false;
+
+  if (window.navigator.maxTouchPoints <= 0) return false;
+  if (isDesktopOperatingSystem()) return false;
+
+  const shortSide = Math.min(window.screen.width, window.screen.height);
+  return shortSide <= 1024;
+}
+
+export function isMobileOrTabletDevice(): boolean {
+  if (typeof window === "undefined") return false;
+
+  // UA / client hints first — catches most phones and tablets.
+  if (hasMobileUserAgentHint()) return true;
+
+  // Android "Desktop site" drops Android from UA but keeps touch + tablet size.
+  if (isTouchTabletFormFactor()) return true;
 
   const isDesktopLike = window.matchMedia(
     "(hover: hover) and (pointer: fine) and (min-width: 1024px)",
