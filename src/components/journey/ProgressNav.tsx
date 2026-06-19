@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
@@ -44,9 +45,35 @@ export function ProgressNav({ slug }: ProgressNavProps) {
   const currentStepId = resolveStepFromPath(pathname);
   const currentIndex = getStepIndex(currentStepId);
   const { start } = useJourneyTransition();
+  const navRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const nav = navRef.current;
+    if (!nav) return;
+
+    const syncNavHeight = () => {
+      document.documentElement.style.setProperty(
+        "--journey-nav-height",
+        `${nav.getBoundingClientRect().height}px`,
+      );
+    };
+
+    syncNavHeight();
+    const observer = new ResizeObserver(syncNavHeight);
+    observer.observe(nav);
+    window.addEventListener("resize", syncNavHeight);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", syncNavHeight);
+    };
+  }, []);
 
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-brand-primary px-4 py-2 shadow-[0_-4px_24px_rgba(0,0,0,0.15)]">
+    <nav
+      ref={navRef}
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-brand-primary px-4 py-2 shadow-[0_-4px_24px_rgba(0,0,0,0.15)]"
+    >
       <div className="mx-auto flex max-w-6xl items-center gap-3 pb-safe lg:gap-4">
         <Link
           href="/"

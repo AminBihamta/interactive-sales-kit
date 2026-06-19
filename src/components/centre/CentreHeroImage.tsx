@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { centreHeroReveal } from "@/lib/animations";
 import type { Centre } from "@/lib/types";
-import { CentreBackNav } from "./CentreBackNav";
 
 interface CentreHeroImageProps {
   centre: Centre;
@@ -47,10 +46,6 @@ export function CentreHeroImage({ centre, ready = true }: CentreHeroImageProps) 
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/20" />
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/15" />
-
-      <div className="absolute left-4 top-4 z-10 lg:left-6 lg:top-6">
-        <CentreBackNav />
-      </div>
 
       <span className="absolute right-4 top-4 z-10 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-brand-secondary backdrop-blur lg:right-6 lg:top-6">
         {centre.region}
