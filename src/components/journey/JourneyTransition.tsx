@@ -75,11 +75,7 @@ export function JourneyTransitionProvider({
     ) => {
       if (phase !== "idle") return;
 
-      if (
-        reducedMotion ||
-        !clickOrigin ||
-        transitionVariant === "journey"
-      ) {
+      if (reducedMotion || !clickOrigin) {
         router.push(href);
         return;
       }
