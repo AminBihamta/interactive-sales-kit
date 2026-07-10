@@ -6,7 +6,7 @@
       "name": "Ampang",
       "region": "KL",
       "address": "7, Jalan Ampang Hilir, Taman U Thant, 55000 Kuala Lumpur, Wilayah Persekutuan, Malaysia",
-      "heroTagline": "Nurturing Young Minds Since 1986",
+      "heroTagline": "7, Jalan Ampang Hilir, Taman U Thant, 55000 Kuala Lumpur, Wilayah Persekutuan, Malaysia",
       "intro": "Set on a charming colonial one-acre property, our Ampang centre has welcomed over 250 children from 50 nations into bright Montessori classrooms, expansive lawns, and play spaces designed for discovery.",
       "ageRange": "18 months – 6 years",
       "image": "/images/centres/ampang.png",
@@ -40,7 +40,7 @@
       "name": "Bangsar",
       "region": "KL",
       "address": "53, Jalan Terasek, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-      "heroTagline": "Nurturing Young Minds Since 1986",
+      "heroTagline": "53, Jalan Terasek, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
       "intro": "Spanning 14,000 square feet, our Bangsar centre combines a specially designed Montessori environment, award-winning infant care, and experienced educators who nurture each child’s natural curiosity.",
       "ageRange": "8 months – 6 years",
       "image": "/images/centres/bangsar.png",
@@ -50,7 +50,7 @@
       "programmes": {
         "playgroup": {
           "available": true,
-          "ageRange": "18 months – 2.5 years",
+          "ageRange": "8 months – 2.5 years",
           "description": "Toddler programme with Little Chef Kitchen activities."
         },
         "junior": {
@@ -74,7 +74,7 @@
       "name": "Bruas",
       "region": "KL",
       "address": "38, Jalan Bruas, Bukit Damansara, 50490 Kuala Lumpur, Wilayah Persekutuan",
-      "heroTagline": "Nurturing Young Minds Since 1986",
+      "heroTagline": "38, Jalan Bruas, Bukit Damansara, 50490 Kuala Lumpur, Wilayah Persekutuan",
       "intro": "Established in 1996, our Bruas centre offers a warm second-home Montessori environment with a renovated campus, outdoor play area, creative atelier, and modern music room.",
       "ageRange": "3 months – 6 years",
       "image": "/images/centres/bruas.png",
@@ -84,7 +84,7 @@
       "programmes": {
         "playgroup": {
           "available": true,
-          "ageRange": "18 months – 2.5 years",
+          "ageRange": "3 months – 2.5 years",
           "description": "Toddler programme with Little Chef Kitchen activities."
         },
         "junior": {
@@ -108,7 +108,7 @@
       "name": "Bukit Jalil City",
       "region": "KL",
       "address": "Signature Shop Office, K3A-1 & K3A-M, Jalan Persiaran Jalil 1, Bukit Jalil, 57000 Kuala Lumpur",
-      "heroTagline": "Nurturing Young Minds Since 1986",
+      "heroTagline": "Signature Shop Office, K3A-1 & K3A-M, Jalan Persiaran Jalil 1, Bukit Jalil, 57000 Kuala Lumpur",
       "intro": "Spanning 14,000 square feet, our Bukit Jalil City centre offers a specially designed Montessori environment, award-winning infant care, and dedicated educators who nurture every child with genuine care.",
       "ageRange": "8 months – 6 years",
       "image": "/images/centres/bukit-jalil-city.png",
@@ -118,7 +118,7 @@
       "programmes": {
         "playgroup": {
           "available": true,
-          "ageRange": "18 months – 2.5 years",
+          "ageRange": "8 months – 2.5 years",
           "description": "Toddler programme with Little Chef Kitchen activities."
         },
         "junior": {
@@ -142,7 +142,7 @@
       "name": "Mont Kiara",
       "region": "KL",
       "address": "Lot 15229, Jalan Duta Kiara, Dutamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia.",
-      "heroTagline": "Nurturing Young Minds Since 1986",
+      "heroTagline": "Lot 15229, Jalan Duta Kiara, Dutamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia.",
       "intro": "Spanning 14,000 square feet, our Mont Kiara centre combines award-winning infant care, a specially designed Montessori environment, and experienced educators who guide every child with genuine care.",
       "ageRange": "3 months – 6 years",
       "image": "/images/centres/mont-kiara.png",
@@ -152,7 +152,7 @@
       "programmes": {
         "playgroup": {
           "available": true,
-          "ageRange": "18 months – 2.5 years",
+          "ageRange": "3 months – 2.5 years",
           "description": "Toddler programme with Little Chef Kitchen activities."
         },
         "junior": {
@@ -176,7 +176,7 @@
       "name": "Taman OUG",
       "region": "KL",
       "address": "39, Jalan Hujan Emas, Taman Overseas Union, 58200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-      "heroTagline": "Nurturing Young Minds Since 1986",
+      "heroTagline": "39, Jalan Hujan Emas, Taman Overseas Union, 58200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
       "intro": "Housed in a two-storey complex with an expansive compound, our Taman OUG centre combines award-winning infant care with a specially designed Montessori environment for young children.",
       "ageRange": "8 months – 6 years",
       "image": "/images/centres/taman-oug.png",
@@ -186,7 +186,7 @@
       "programmes": {
         "playgroup": {
           "available": true,
-          "ageRange": "18 months – 2.5 years",
+          "ageRange": "8 months – 2.5 years",
           "description": "Toddler programme with Little Chef Kitchen activities."
         },
         "junior": {
@@ -210,7 +210,7 @@
       "name": "TTDI",
       "region": "KL",
       "address": "154, Pinggir Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan, Malaysia.",
-      "heroTagline": "Nurturing Young Minds Since 1986",
+      "heroTagline": "154, Pinggir Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan, Malaysia.",
       "intro": "Welcoming children since 2007, our TTDI centre features thoughtfully designed classrooms, expansive outdoor spaces, and a Montessori environment that helps children explore, learn, and grow with confidence.",
       "ageRange": "18 months – 6 years",
       "image": "/images/centres/ttdi.png",
@@ -244,7 +244,7 @@
       "name": "TTDI 2 Junior",
       "region": "KL",
       "address": "43, Persiaran Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-      "heroTagline": "Nurturing Young Minds Since 1986",
+      "heroTagline": "43, Persiaran Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
       "intro": "Housed in a two-storey complex with plenty of room to play, run, and grow, our TTDI 2 Junior centre supports early development through award-winning infant care and a toddler-focused prepared environment.",
       "ageRange": "8 months – 2.5 years",
       "image": "/images/centres/ttdi-2-junior.png",
@@ -254,7 +254,7 @@
       "programmes": {
         "playgroup": {
           "available": true,
-          "ageRange": "18 months – 2.5 years",
+          "ageRange": "8 months – 2.5 years",
           "description": "Toddler programme with Little Chef Kitchen activities."
         },
         "junior": {
@@ -278,7 +278,7 @@
       "name": "TTDI 2 Senior",
       "region": "KL",
       "address": "43, Persiaran Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-      "heroTagline": "Nurturing Young Minds Since 1986",
+      "heroTagline": "43, Persiaran Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
       "intro": "Our TTDI 2 Senior centre builds firm foundations for formal learning with Malaysia’s first Montessori STEAM curriculum, personalised support, and a spacious two-storey environment designed for young children.",
       "ageRange": "2.6 – 6 years",
       "image": "/images/centres/ttdi-2-senior.png",
@@ -312,7 +312,7 @@
       "name": "U-Thant",
       "region": "KL",
       "address": "11, Jalan U Thant, Kelab Golf di Raja Selangor, 55000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-      "heroTagline": "Nurturing Young Minds Since 1986",
+      "heroTagline": "11, Jalan U Thant, Kelab Golf di Raja Selangor, 55000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
       "intro": "Set within an expansive 1.5-acre campus, our U-Thant centre blends a child-first Montessori environment with lush green spaces, unique creative areas, and experienced educators who nurture each child with genuine care.",
       "ageRange": "18 months – 6 years",
       "image": "/images/centres/u-thant.png",
@@ -346,7 +346,7 @@
       "name": "16 Sierra",
       "region": "Selangor",
       "address": "No.37, Jalan Sierra 10/1, Bandar 16 Sierra, 47120 Puchong, Selangor",
-      "heroTagline": "Nurturing Young Minds Since 1986",
+      "heroTagline": "No.37, Jalan Sierra 10/1, Bandar 16 Sierra, 47120 Puchong, Selangor",
       "intro": "In the heart of 16 Sierra, Puchong, our two-storey Montessori preschool is set within an expansive compound where children have plenty of space to run, play, and grow, supported by qualified teachers and genuine care.",
       "ageRange": "8 months – 6 years",
       "image": "/images/centres/16-sierra.png",
@@ -380,7 +380,7 @@
       "name": "Cyberjaya",
       "region": "Selangor",
       "address": "F-00-01, Camerata, Shaftsbury, Jalan Impact, Shaftsbury Square, 63000 Cyberjaya, Selangor",
-      "heroTagline": "Nurturing Young Minds Since 1986",
+      "heroTagline": "F-00-01, Camerata, Shaftsbury, Jalan Impact, Shaftsbury Square, 63000 Cyberjaya, Selangor",
       "intro": "Housed in a two-storey complex with plenty of space to run, play, and grow, our Cyberjaya centre pairs award-winning infant care with a Montessori environment designed for sensorial development.",
       "ageRange": "8 months – 6 years",
       "image": "/images/centres/cyberjaya.png",
@@ -390,7 +390,7 @@
       "programmes": {
         "playgroup": {
           "available": true,
-          "ageRange": "18 months – 2.5 years",
+          "ageRange": "8 months – 2.5 years",
           "description": "Toddler programme with Little Chef Kitchen activities."
         },
         "junior": {
@@ -414,7 +414,7 @@
       "name": "Maisson Ara Damansara",
       "region": "Selangor",
       "address": "Lot 01-02 ,02-17, 02-18, 02-19 & 02-20, Maisson by the Park, Jalan PJU 1a/3, Ara Damansara, 47301 Petaling Jaya, Selangor",
-      "heroTagline": "Nurturing Young Minds Since 1986",
+      "heroTagline": "Lot 01-02 ,02-17, 02-18, 02-19 & 02-20, Maisson by the Park, Jalan PJU 1a/3, Ara Damansara, 47301 Petaling Jaya, Selangor",
       "intro": "Spanning 14,000 square feet, our Maisson Ara Damansara centre pairs a specially designed Montessori environment with award-winning infant care and a dedicated team committed to every child’s growth.",
       "ageRange": "3 months – 6 years",
       "image": "/images/centres/maisson-ara-damansara.png",
@@ -424,7 +424,7 @@
       "programmes": {
         "playgroup": {
           "available": true,
-          "ageRange": "18 months – 2.5 years",
+          "ageRange": "3 months – 2.5 years",
           "description": "Toddler programme with Little Chef Kitchen activities."
         },
         "junior": {
@@ -448,7 +448,7 @@
       "name": "Mutiara Damansara",
       "region": "Selangor",
       "address": "Level 1, 1, Jalan PJU 7/12, Mutiara Damansara, 47800 Petaling Jaya, Selangor",
-      "heroTagline": "Nurturing Young Minds Since 1986",
+      "heroTagline": "Level 1, 1, Jalan PJU 7/12, Mutiara Damansara, 47800 Petaling Jaya, Selangor",
       "intro": "With 38 years of expertise, our Mutiara Damansara centre features purpose-built facilities including outdoor playground, water play, and a Little Chef Kitchen.",
       "ageRange": "18 months – 6 years",
       "image": "/images/centres/mutiara-damansara.jpg",
@@ -482,7 +482,7 @@
       "name": "Setia Alam",
       "region": "Selangor",
       "address": "No 2 & 4, Jalan Setia Indah U13/11n, Setia Alam, 40170 Shah Alam, Selangor",
-      "heroTagline": "Nurturing Young Minds Since 1986",
+      "heroTagline": "No 2 & 4, Jalan Setia Indah U13/11n, Setia Alam, 40170 Shah Alam, Selangor",
       "intro": "Our Setia Alam centre is a purpose-built three-storey Montessori complex with spacious prepared environments, award-winning infant care, and safe spaces for independent exploration indoors and outdoors.",
       "ageRange": "8 months – 6 years",
       "image": "/images/centres/setia-alam.png",
@@ -492,12 +492,12 @@
       "programmes": {
         "playgroup": {
           "available": true,
-          "ageRange": "18 months – 2.5 years",
+          "ageRange": "8 months – 3 years",
           "description": "Toddler programme with Little Chef Kitchen activities."
         },
         "junior": {
           "available": true,
-          "ageRange": "2.6 – 6 years",
+          "ageRange": "3 – 6 years",
           "description": "Award-winning junior programme with outdoor learning."
         }
       },
