@@ -20,7 +20,6 @@ export function CentreCarousel({ centres, filterKey }: CentreCarouselProps) {
     align: "center",
     loop: centres.length > 1,
     containScroll: false,
-    watchDrag: false,
     duration: 0,
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
