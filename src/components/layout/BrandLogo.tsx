@@ -20,7 +20,7 @@ export function BrandLogo({
   const logo = (
     <Image
       src={isRed ? "/images/red-logo.svg" : "/images/logo-white.svg"}
-      alt="The children's house montessori by Busy Bees"
+      alt="The children's house Montessori by Busy Bees"
       width={isRed ? 149 : 251}
       height={isRed ? 60 : 91}
       priority={priority}

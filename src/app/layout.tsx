@@ -13,7 +13,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "The Children's House — Interactive Sales Kit",
+  title: "The children's house Montessori — Interactive Sales Kit",
   description:
     "Malaysia's longest established Montessori preschool — interactive sales kit for centre tours and open days.",
   applicationName: "TCH Sales Kit",

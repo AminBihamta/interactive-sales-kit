@@ -1,7 +1,7 @@
 {
-  "name": "The Children's House Sales Kit",
+  "name": "The children's house Montessori Sales Kit",
   "short_name": "TCH Sales Kit",
-  "description": "Interactive sales kit for The Children's House Montessori preschool centres",
+  "description": "Interactive sales kit for The children's house Montessori preschool centres",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FFFFFF",

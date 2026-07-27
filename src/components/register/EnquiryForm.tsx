@@ -353,7 +353,7 @@ export function EnquiryForm({ centre }: EnquiryFormProps) {
               />
               <Label htmlFor="consent" className="text-sm leading-relaxed">
                 I agree to be contacted by Busy Bees Asia and its partners
-                regarding enrolment at The Children&apos;s House Montessori.
+                regarding enrolment at The children&apos;s house Montessori.
               </Label>
             </div>
             {errors.marketingConsent && (

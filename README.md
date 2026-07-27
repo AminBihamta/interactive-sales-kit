@@ -1,4 +1,4 @@
-# The Children's House — Interactive Sales Kit
+# The children's house Montessori — Interactive Sales Kit
 
 Tablet-first PWA for sales reps to guide parents through centre tours and open days.
 
