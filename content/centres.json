@@ -111,9 +111,9 @@
       "heroTagline": "Signature Shop Office, K3A-1 & K3A-M, Jalan Persiaran Jalil 1, Bukit Jalil, 57000 Kuala Lumpur",
       "intro": "Spanning 14,000 square feet, our Bukit Jalil City centre offers a specially designed Montessori environment, award-winning infant care, and dedicated educators who nurture every child with genuine care.",
       "ageRange": "8 months – 6 years",
-      "image": "/images/centres/bukit-jalil-city.webp",
+      "image": "/images/centres/bukit-jalil-city.jpeg",
       "gallery": [
-        "/images/centres/bukit-jalil-city.webp"
+        "/images/centres/bukit-jalil-city.jpeg"
       ],
       "programmes": {
         "playgroup": {
@@ -205,40 +205,6 @@
       "websiteUrl": "https://www.thechildrenshouse.com.my/taman-oug/"
     },
     {
-      "id": "ttdi",
-      "slug": "ttdi",
-      "name": "TTDI",
-      "region": "KL",
-      "address": "154, Pinggir Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan, Malaysia.",
-      "heroTagline": "154, Pinggir Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan, Malaysia.",
-      "intro": "Welcoming children since 2007, our TTDI centre features thoughtfully designed classrooms, expansive outdoor spaces, and a Montessori environment that helps children explore, learn, and grow with confidence.",
-      "ageRange": "18 months – 6 years",
-      "image": "/images/centres/ttdi.png",
-      "gallery": [
-        "/images/centres/ttdi.png"
-      ],
-      "programmes": {
-        "playgroup": {
-          "available": true,
-          "ageRange": "18 months – 2.5 years",
-          "description": "Toddler programme with Little Chef Kitchen activities."
-        },
-        "junior": {
-          "available": true,
-          "ageRange": "2.6 – 6 years",
-          "description": "Award-winning junior programme with outdoor learning."
-        }
-      },
-      "playgroupMinAgeMonths": 18,
-      "feesAvailable": true,
-      "usps": [
-        "Outdoor learning spaces",
-        "Award-winning programme",
-        "Personalised learning"
-      ],
-      "websiteUrl": "https://www.thechildrenshouse.com.my/ttdi/"
-    },
-    {
       "id": "ttdi-2-junior",
       "slug": "ttdi-2-junior",
       "name": "TTDI 2 Junior",
@@ -246,7 +212,7 @@
       "address": "43, Persiaran Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
       "heroTagline": "43, Persiaran Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
       "intro": "Housed in a two-storey complex with plenty of room to play, run, and grow, our TTDI 2 Junior centre supports early development through award-winning infant care and a toddler-focused prepared environment.",
-      "ageRange": "8 months – 2.5 years",
+      "ageRange": "8 months – 4 years",
       "image": "/images/centres/ttdi-2-junior.jpg",
       "gallery": [
         "/images/centres/ttdi-2-junior.jpg"
@@ -254,7 +220,7 @@
       "programmes": {
         "playgroup": {
           "available": true,
-          "ageRange": "8 months – 2.5 years",
+          "ageRange": "8 months – 4 years",
           "description": "Toddler programme with Little Chef Kitchen activities."
         },
         "junior": {
@@ -280,7 +246,7 @@
       "address": "43, Persiaran Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
       "heroTagline": "43, Persiaran Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
       "intro": "Our TTDI 2 Senior centre builds firm foundations for formal learning with Malaysia’s first Montessori STEAM curriculum, personalised support, and a spacious two-storey environment designed for young children.",
-      "ageRange": "2.6 – 6 years",
+      "ageRange": "4 – 6 years",
       "image": "/images/centres/ttdi-2-senior.jpg",
       "gallery": [
         "/images/centres/ttdi-2-senior.jpg"
@@ -293,11 +259,11 @@
         },
         "junior": {
           "available": true,
-          "ageRange": "2.6 – 6 years",
+          "ageRange": "4 – 6 years",
           "description": "Award-winning junior programme with outdoor learning."
         }
       },
-      "playgroupMinAgeMonths": 31,
+      "playgroupMinAgeMonths": 48,
       "feesAvailable": true,
       "usps": [
         "Montessori STEAM curriculum",
@@ -315,9 +281,9 @@
       "heroTagline": "11, Jalan U Thant, Kelab Golf di Raja Selangor, 55000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
       "intro": "Set within an expansive 1.5-acre campus, our U-Thant centre blends a child-first Montessori environment with lush green spaces, unique creative areas, and experienced educators who nurture each child with genuine care.",
       "ageRange": "18 months – 6 years",
-      "image": "/images/centres/u-thant.png",
+      "image": "/images/centres/u-thant.jpeg",
       "gallery": [
-        "/images/centres/u-thant.png"
+        "/images/centres/u-thant.jpeg"
       ],
       "programmes": {
         "playgroup": {

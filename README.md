@@ -57,7 +57,7 @@ npx vercel
 
 Static JSON in `/content/`:
 
-- `centres.json` — 15 centres
+- `centres.json` — 14 centres
 - `curriculum.json` — STEAM + Montessori
 - `schedules.json` — daily timeline
 - `fees.json` — per-centre fee tables from sales PDF

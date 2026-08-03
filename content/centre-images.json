@@ -23,12 +23,6 @@
     "address": "Lot 15229, Jalan Duta Kiara, Dutamas, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia.",
     "localPath": "/images/centres/mont-kiara.webp"
   },
-  "ttdi": {
-    "name": "TTDI",
-    "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/01/Frame-10-4.png",
-    "address": "154, Pinggir Zaaba, Taman Tun Dr Ismail, 60000 Kuala Lumpur, Wilayah Persekutuan, Malaysia.",
-    "localPath": "/images/centres/ttdi.png"
-  },
   "ttdi-2-junior": {
     "name": "TTDI 2 Junior",
     "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/01/Frame-10-5.png",
@@ -45,7 +39,7 @@
     "name": "Bukit Jalil City",
     "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/01/Frame-10-9.png",
     "address": "Signature Shop Office, K3A-1 &amp; K3A-M, Jalan Persiaran Jalil 1, Bukit Jalil, 57000 Kuala Lumpur",
-    "localPath": "/images/centres/bukit-jalil-city.webp"
+    "localPath": "/images/centres/bukit-jalil-city.jpeg"
   },
   "taman-oug": {
     "name": "Taman OUG",
@@ -57,7 +51,7 @@
     "name": "U-Thant",
     "image_url": "https://www.thechildrenshouse.com.my/wp-content/uploads/2025/01/Frame-10-8.png",
     "address": "11, Jalan U Thant, Kelab Golf di Raja Selangor, 55000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
-    "localPath": "/images/centres/u-thant.png"
+    "localPath": "/images/centres/u-thant.jpeg"
   },
   "maisson-ara-damansara": {
     "name": "Maisson Ara Damansara",

@@ -488,55 +488,6 @@
       ]
     },
     {
-      "slug": "ttdi",
-      "available": true,
-      "oneTimeFees": {
-        "registrationFee": 1000,
-        "annualResourceFee": 800,
-        "bookStationeryUnder3": 350,
-        "bookStationeryOver3": 650,
-        "insurance": 30
-      },
-      "tiers": [
-        {
-          "ageGroup": "Montessori Playgroup (18 months – 3 YO)",
-          "programmeType": "Half Day",
-          "schoolHours": "9 am – 12 / 12.30 pm",
-          "termFee": 6000,
-          "monthlyFee": 2000,
-          "deposit": 2000
-        },
-        {
-          "ageGroup": "Montessori Playgroup (18 months – 3 YO)",
-          "programmeType": "Extended Day",
-          "schoolHours": "9 am – 3 pm",
-          "termFee": 6900,
-          "monthlyFee": 2300,
-          "deposit": 2300
-        },
-        {
-          "ageGroup": "Montessori Junior (4 – 6 YO)",
-          "programmeType": "Half Day",
-          "schoolHours": "9 am – 1 pm",
-          "termFee": 5550,
-          "monthlyFee": 1850,
-          "deposit": 1850
-        },
-        {
-          "ageGroup": "Montessori Junior (4 – 6 YO)",
-          "programmeType": "Extended Day",
-          "schoolHours": "9 am – 3 pm",
-          "termFee": 6660,
-          "monthlyFee": 2220,
-          "deposit": 2220
-        }
-      ],
-      "notes": [
-        "1 term = 3 months",
-        "Other optional miscellaneous fees will be shared with parents in due course."
-      ]
-    },
-    {
       "slug": "ttdi-2-junior",
       "available": true,
       "oneTimeFees": {
